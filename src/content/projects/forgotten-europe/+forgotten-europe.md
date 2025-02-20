@@ -3,7 +3,7 @@ published: true
 name: forgotten europe
 description: website for the forgotten europe project
 thumbnail: fep.png
-images: [fep2.png]
+images: [fep.png, fep2.png, fep3.png, fep4.png, fep5.png]
 github: https://github.com/refact0r/forgotten-europe-website
 website: https://forgotteneurope.org
 date: 2022-07-06

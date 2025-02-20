@@ -24,3 +24,9 @@ We planned to include a gamified aspect (but didn't have enough time to full imp
 ## implementation
 
 pinScout was built on the SvelteKit framework. It uses Mapbox for the map implementation, and Supabase for database and auth. It is hosted on Vercel.
+
+I thought at the beginning that the map implementation would be the hardest part, but it wasn't too bad. The only annoying part was getting user location working. In the end we probably spent the most time setting up the database and integrating it with the app.
+
+## reflection
+
+I'm happy with how this project turned out, but I feel like we definitely overplanned and underdelivered. We definitely should've focused more on implementing the gamification aspect, and explaining to the judges more clearly the motivations and uses of the app. Also, I wished we could've done a more unique visual design, but again we were limited by time.
