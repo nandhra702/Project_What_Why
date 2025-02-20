@@ -27,6 +27,6 @@ The hard part of the project was simulating the solar system itself. We had to n
 
 With the messaging system in place and a way to calculate communication delay, we thought we were almost done. Then, someone came up with an idea: what if we displayed a live model of the solar system on the home page? This would be a great way to show the user how far away they are from their destination planet. After a couple of hours, we managed to build a simplified 2D SVG representation of the solar system on the homepage. Active messages would be shown as dots on lines connecting two planets. We even added a time slider at the bottom to allow the user to see the movement of the planets over time.
 
-## conclusion
+## reflection
 
 Ultimately, I'm pretty proud of cmail. It was a fun and challenging project that we were able to complete in a short amount of time. Although our project didn't actually do anything useful, I think it showed the importance of good user interface design.
