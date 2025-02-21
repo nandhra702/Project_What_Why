@@ -1,4 +1,8 @@
 <script>
+	import GithubIcon from '~icons/ph/github-logo';
+	import DiscordIcon from '~icons/ph/discord-logo';
+	import KofiIcon from '~icons/ph/coffee';
+
 	let content = {
 		languages: {
 			web: ['js', 'ts', 'html', 'css', 'scss'],
@@ -6,7 +10,7 @@
 		},
 		tech: {
 			frameworks: ['sveltekit', 'flutter', 'quart'],
-			databases: ['mongo', 'sqlite', 'isar'],
+			databases: ['postgresl', 'sqlite', 'mongodb', 'isar'],
 			cms: ['sanity', 'decap'],
 			tools: ['vscode', 'figma', 'inkscape']
 		}
@@ -21,14 +25,15 @@
 		are both functional and beautiful.
 	</p>
 	<h2>links</h2>
-	<a href="https://github.com/refact0r" class="external">github<span class="arrow">/></span> </a>
-	<a href="https://discord.com/users/508863359777505290" class="external"
-		>discord<span class="arrow">/></span>
+	<a href="https://github.com/refact0r" class="external icon">
+		<GithubIcon /><span class="text">github</span><span class="arrow">/></span>
 	</a>
-	<!-- <div class="row">
-		<div class="col"></div>
-		<div class="col"></div>
-	</div> -->
+	<a href="https://discord.com/users/508863359777505290" class="external icon">
+		<DiscordIcon /><span class="text">discord</span><span class="arrow">/></span>
+	</a>
+	<a href="https://ko-fi.com/refact0r" class="external icon">
+		<KofiIcon /><span class="text">ko-fi</span><span class="arrow">/></span>
+	</a>
 	<h2>languages</h2>
 	{#each Object.keys(content.languages) as category}
 		<div class="info">
@@ -106,7 +111,7 @@
 	a {
 		font-family: 'Space Mono', monospace;
 		font-size: 1.2rem;
-		margin: 0.5rem 0;
+		margin: 0.75rem 0;
 		display: block;
 	}
 
@@ -124,7 +129,7 @@
 			transition: 0.2s;
 		}
 		&.home:hover {
-			text-decoration: underline;
+			text-decoration: underline 2px;
 		}
 		&.next:hover span {
 			transform: translateX(0.3em);

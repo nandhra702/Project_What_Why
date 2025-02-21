@@ -1,5 +1,9 @@
 <script>
+	import DiscordIcon from '~icons/ph/discord-logo';
+	import EmailIcon from '~icons/ph/envelope';
+
 	let status = 'submit ->';
+
 	const handleSubmit = async (data) => {
 		status = 'submitting...';
 		const formData = new FormData(data.currentTarget);
@@ -27,18 +31,17 @@
 	<h1>contact</h1>
 	<p>ways to get in touch, in order from fastest to slowest.</p>
 	<div class="info">
-		discord <span class="sub">-></span>
+		<DiscordIcon />discord <span class="sub">-></span>
 		<a href="https://discord.com/users/508863359777505290" class="external"
 			>refact0r<span class="arrow">/></span>
 		</a>
 	</div>
 	<div class="info">
-		email <span class="sub">-></span>
+		<EmailIcon />email <span class="sub">-></span>
 		<a href="mailto:refact0r.contact@gmail.com" class="external"
 			>refact0r.contact@gmail.com<span class="arrow">/></span>
 		</a>
 	</div>
-	<br />
 	<br />
 	<br />
 	<h3>contact form</h3>
@@ -66,6 +69,13 @@
 		font-size: 1.2rem;
 		margin: 0.5rem 0;
 		font-family: 'Space Mono', monospace;
+
+		:global(svg) {
+			vertical-align: sub;
+			font-size: 1.1em;
+			margin-right: 0.75ch;
+			margin-bottom: -0.05em;
+		}
 	}
 
 	form {

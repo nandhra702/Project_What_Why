@@ -1,7 +1,7 @@
 <script>
 	import { formatDate } from '$lib/js/utils.js';
 
-	export let data;
+	let { data } = $props();
 </script>
 
 <main>
