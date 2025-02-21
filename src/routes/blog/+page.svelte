@@ -1,16 +1,8 @@
 <script>
 	import { formatDate } from '$lib/js/utils.js';
-	import FileIcon from '~icons/ph/file-text';
-	import GlobeIcon from '~icons/ph/globe';
-	import CodeIcon from '~icons/ph/code';
+	import { iconMap } from '$lib/js/icons.js';
 
 	let { data } = $props();
-
-	const iconMap = {
-		paper: FileIcon,
-		globe: GlobeIcon,
-		code: CodeIcon
-	};
 </script>
 
 <main>

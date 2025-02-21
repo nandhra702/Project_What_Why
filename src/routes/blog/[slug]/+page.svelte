@@ -1,19 +1,20 @@
 <script>
 	import { formatDate } from '$lib/js/utils.js';
+	import { iconMap } from '$lib/js/icons.js';
 
-	export let data;
-
+	let { data } = $props();
 	let { default: content, metadata } = data.post;
+	let Icon = iconMap[metadata.icon];
 </script>
 
 <main>
 	<h1>
-		<iconify-icon icon={metadata.icon}></iconify-icon>{metadata.name}
+		<Icon class="icon" />{metadata.name}
 	</h1>
 	<p class="date">{formatDate(metadata.date)}</p>
 	<p class="description">{metadata.description}</p>
 	<div class="content">
-		<svelte:component this={content} />
+		{@render content()}
 	</div>
 </main>
 
@@ -42,5 +43,11 @@
 		font-size: 2.5rem;
 		margin: 2rem 0;
 		line-height: 1.3;
+	}
+
+	h1 :global(svg) {
+		vertical-align: sub;
+		margin-right: 0.75ch;
+		transform: translateY(4%);
 	}
 </style>

@@ -38,7 +38,6 @@
 	"dependencies": {
 		"@fontsource/space-mono": "^5.1.2",
 		"embla-carousel-svelte": "^8.5.2",
-		"iconify-icon": "^2.3.0",
 		"lottie-web": "^5.12.2",
 		"shiki": "^2.2.0",
 		"wrangler": "^3.107.2"

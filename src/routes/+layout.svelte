@@ -2,7 +2,6 @@
 	import '../app.css';
 	import '$lib/assets/fonts/space-mono.css';
 	import '$lib/assets/fonts/space-grotesk.css';
-	import 'iconify-icon';
 	import { page } from '$app/stores';
 	import Logo from '$lib/components/Logo.svelte';
 	import PageHead from '$lib/components/PageHead.svelte';
