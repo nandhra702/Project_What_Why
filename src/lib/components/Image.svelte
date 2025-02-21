@@ -1,8 +1,5 @@
 <script>
-	export let image,
-		alt,
-		sizes = '',
-		loading = 'eager';
+	let { image, alt, sizes = '', loading = 'eager' } = $props();
 
 	async function importImage(image) {
 		const pictures = import.meta.glob(`/src/content/**/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}`, {
@@ -31,7 +28,7 @@
 			{loading}
 			width={src.img.w}
 			height={src.img.h}
-			on:load={(e) => (e.target.style.opacity = 1)}
+			onload={(e) => (e.target.style.opacity = 1)}
 		/>
 	{/await}
 </picture>
