@@ -62,7 +62,7 @@
 	>
 	<div class="info">
 		stack <span class="sub">-></span> sveltekit <span class="sub">/</span> mdsvex
-		<span class="sub">/</span> vite <span class="sub">/</span> vercel
+		<span class="sub">/</span> vite <span class="sub">/</span> cloudflare pages
 	</div>
 	<div class="info">
 		fonts <span class="sub">-></span> space mono <span class="sub">/</span>
