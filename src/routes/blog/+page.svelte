@@ -1,7 +1,16 @@
 <script>
 	import { formatDate } from '$lib/js/utils.js';
+	import FileIcon from '~icons/ph/file-text';
+	import GlobeIcon from '~icons/ph/globe';
+	import CodeIcon from '~icons/ph/code';
 
 	let { data } = $props();
+
+	const iconMap = {
+		paper: FileIcon,
+		globe: GlobeIcon,
+		code: CodeIcon
+	};
 </script>
 
 <main>
@@ -9,10 +18,11 @@
 
 	<div class="posts">
 		{#each data.posts as post}
+			{@const Icon = iconMap[post.icon]}
 			<a href={'/blog/' + post.slug} class="link">
 				<div class="date">{formatDate(post.date)}</div>
 				<h2>
-					<iconify-icon icon={post.icon}></iconify-icon>{post.name}<span class="arrow">-></span>
+					<Icon />{post.name}<span class="arrow">-></span>
 				</h2>
 				<div class="description">{post.description}</div>
 			</a>
@@ -39,6 +49,12 @@
 		font-size: 1.5rem;
 		margin: 0;
 		color: var(--txt);
+	}
+
+	h2 :global(svg) {
+		vertical-align: sub;
+		margin-right: 0.75ch;
+		transform: translateY(4%);
 	}
 
 	.date {

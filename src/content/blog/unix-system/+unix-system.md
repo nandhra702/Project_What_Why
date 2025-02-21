@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'the unix time-sharing system'
-icon: 'ph:files'
+icon: 'paper'
 description: an overview of the design and features of the UNIX operating system.
 date: 2024-02-24
 ---

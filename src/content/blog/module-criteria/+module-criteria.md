@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'on the criteria to be used in decomposing systems into modules'
-icon: 'ph:files'
+icon: 'paper'
 description: a better method of modularizing software systems
 date: 2024-03-30
 ---

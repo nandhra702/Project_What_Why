@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'optimizing my sveltekit blog'
-icon: 'ph:code'
+icon: 'code'
 description: improving performance on a static sveltekit site
 date: 2024-04-15
 ogImage: 'og-image.png' 

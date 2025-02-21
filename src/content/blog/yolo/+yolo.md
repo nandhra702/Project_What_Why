@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'you only look once'
-icon: 'ph:files'
+icon: 'paper'
 description: real-time object detection using a single neural network 
 date: 2024-07-02
 ---

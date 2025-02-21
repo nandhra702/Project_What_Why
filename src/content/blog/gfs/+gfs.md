@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'the google file system'
-icon: 'ph:files'
+icon: 'paper'
 description: a scalable distributed file system
 date: 2024-04-13
 ---

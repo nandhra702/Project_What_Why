@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'the platonic representation hypothesis'
-icon: 'ph:files'
+icon: 'paper'
 description: the theory that AI models converge on shared model of reality
 date: 2024-06-22
 ---

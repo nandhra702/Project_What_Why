@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'imagenet classification with deep convolutional neural networks'
-icon: 'ph:files'
+icon: 'paper'
 description: a breakthrough computer vision neural network
 date: 2024-03-24
 ---

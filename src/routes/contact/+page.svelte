@@ -72,9 +72,9 @@
 
 		:global(svg) {
 			vertical-align: sub;
-			font-size: 1.1em;
 			margin-right: 0.75ch;
-			margin-bottom: -0.05em;
+			transform: translateY(6%);
+			font-size: 1.1em;
 		}
 	}
 

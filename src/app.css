@@ -199,7 +199,8 @@ a.external.icon {
 	svg {
 		vertical-align: sub;
 		margin-right: 0.75ch;
-		margin-bottom: -0.05em;
+		transform: translateY(6%);
+		font-size: 1.1em;
 	}
 	.text {
 		text-decoration: underline transparent 2px;
@@ -277,13 +278,6 @@ figure {
 		font-size: 1.1rem;
 		line-height: 1.75;
 	}
-}
-
-iconify-icon {
-	vertical-align: sub;
-	margin-right: 0.75ch;
-	margin-bottom: -0.05em;
-	font-size: 1.1em;
 }
 
 .sub {

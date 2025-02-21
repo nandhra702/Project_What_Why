@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'elusive bus ETAs'
-icon: 'ph:globe'
+icon: 'globe'
 description: 'my dive into realtime transit data systems'
 date: 2024-04-09
 ---

@@ -1,7 +1,7 @@
 ---
 published: true
 name: 'playing atari with deep reinforcement learning'
-icon: 'ph:files'
+icon: 'paper'
 description: a deep learning model learns superhuman atari skills
 date: 2024-07-10
 ---
