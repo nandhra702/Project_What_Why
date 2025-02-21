@@ -289,3 +289,8 @@ figure {
 		font-size: 87.5%;
 	}
 }
+
+.icon {
+	vertical-align: sub;
+	transform: translateY(4%);
+}

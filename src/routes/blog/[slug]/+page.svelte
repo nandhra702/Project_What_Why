@@ -45,9 +45,7 @@
 		line-height: 1.3;
 	}
 
-	h1 :global(svg) {
-		vertical-align: sub;
+	h1 :global(.icon) {
 		margin-right: 0.75ch;
-		transform: translateY(4%);
 	}
 </style>

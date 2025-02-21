@@ -14,7 +14,7 @@
 			<a href={'/blog/' + post.slug} class="link">
 				<div class="date">{formatDate(post.date)}</div>
 				<h2>
-					<Icon />{post.name}<span class="arrow">-></span>
+					<Icon class="icon" />{post.name}<span class="arrow">-></span>
 				</h2>
 				<div class="description">{post.description}</div>
 			</a>
@@ -43,10 +43,8 @@
 		color: var(--txt);
 	}
 
-	h2 :global(svg) {
-		vertical-align: sub;
+	h2 :global(.icon) {
 		margin-right: 0.75ch;
-		transform: translateY(4%);
 	}
 
 	.date {
