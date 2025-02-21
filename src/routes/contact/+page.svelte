@@ -44,7 +44,7 @@
 	<h3>contact form</h3>
 	<form on:submit|preventDefault={handleSubmit}>
 		<input type="text" name="name" placeholder="name" required />
-		<input type="email" name="email" placeholder="email" required />
+		<input type="email" name="email" placeholder="email (if you want a reply)" required />
 		<textarea name="message" placeholder="your message..." required rows="4"></textarea>
 		<button type="submit">{status}</button>
 	</form>
