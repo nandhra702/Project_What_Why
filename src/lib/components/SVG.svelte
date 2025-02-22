@@ -1,5 +1,5 @@
 <script>
-	export let svg;
+	let { svg } = $props();
 
 	async function importSVG() {
 		const svgs = import.meta.glob(`/src/content/*/*/*.svg`, { query: '?raw' });

@@ -2,12 +2,13 @@
 	import '../app.css';
 	import '$lib/assets/fonts/space-mono.css';
 	import '$lib/assets/fonts/space-grotesk.css';
-	import { page } from '$app/stores';
+	import { page } from '$app/state';
 	import Logo from '$lib/components/Logo.svelte';
 	import PageHead from '$lib/components/PageHead.svelte';
 	import { fly } from 'svelte/transition';
+	import { beforeNavigate } from '$app/navigation';
 
-	export let data;
+	let { data, children } = $props();
 
 	const pages = [
 		{ name: 'projects', path: '/projects' },
@@ -17,21 +18,26 @@
 		{ name: 'contact', path: '/contact' }
 	];
 
-	let prevTwoPages = ['', ''];
-	$: {
-		prevTwoPages = [prevTwoPages[1], data.pathname];
-	}
+	let currPage = $state(data.pathname);
+	let prevPage = $state('');
+
+	beforeNavigate((navigation) => {
+		if (navigation.to?.url.pathname) {
+			prevPage = currPage;
+			currPage = navigation.to.url.pathname;
+		}
+	});
 
 	function xy(path, isIn = true) {
-		if (path === prevTwoPages[0]) {
+		if (path === prevPage) {
 			return { x: 0, y: 0 };
 		}
 
 		let currDepth = path.split('/').length;
-		let prevDepth = prevTwoPages[0].split('/').length;
+		let prevDepth = prevPage.split('/').length;
 		const getParentPath = (p) => '/' + p.split('/')[1];
 		const currParent = getParentPath(path);
-		const prevParent = getParentPath(prevTwoPages[0]);
+		const prevParent = getParentPath(prevPage);
 		let currParentIdx = pages.findIndex((page) => page.path === currParent);
 		let prevParentIdx = pages.findIndex((page) => page.path === prevParent);
 
@@ -39,7 +45,7 @@
 			currParentIdx = prevParentIdx;
 			currDepth = 1;
 		}
-		if (prevTwoPages[0] === '/') {
+		if (prevPage === '/') {
 			prevParentIdx = currParentIdx;
 			prevDepth = 1;
 		}
@@ -52,13 +58,13 @@
 </script>
 
 <PageHead
-	title={$page.error ? $page.status : $page.data.meta.title}
-	description={$page.error ? $page.error.message : $page.data.meta.description}
-	type={$page.data.meta.type}
-	image={$page.data.meta.image}
+	title={page.error ? page.status : page.data.meta.title}
+	description={page.error ? page.error.message : page.data.meta.description}
+	type={page.data.meta.type}
+	image={page.data.meta.image}
 />
 
-<header class:home={$page.url.pathname === '/'}>
+<header class:home={page.url.pathname === '/'}>
 	<div class="row">
 		<a class="pfp" href="/" aria-label="homepage"><Logo --width="2rem" --height="2rem" /></a>
 		<a href="/"><h1>refact0r</h1></a>
@@ -85,7 +91,7 @@
 				...xy(data.pathname, false)
 			}}
 		>
-			<slot />
+			{@render children?.()}
 		</div>
 	{/key}
 </div>

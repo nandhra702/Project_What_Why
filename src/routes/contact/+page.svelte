@@ -2,9 +2,11 @@
 	import DiscordIcon from '~icons/ph/discord-logo';
 	import EmailIcon from '~icons/ph/envelope';
 
-	let status = 'submit ->';
+	let status = $state('submit ->');
 
 	const handleSubmit = async (data) => {
+		data.preventDefault();
+
 		status = 'submitting...';
 		const formData = new FormData(data.currentTarget);
 		const object = Object.fromEntries(formData);
@@ -45,7 +47,7 @@
 	<br />
 	<br />
 	<h3>contact form</h3>
-	<form on:submit|preventDefault={handleSubmit}>
+	<form onsubmit={handleSubmit}>
 		<input type="text" name="name" placeholder="name" required />
 		<input type="email" name="email" placeholder="email (if you want a reply)" required />
 		<textarea name="message" placeholder="your message..." required rows="4"></textarea>
@@ -112,6 +114,10 @@
 	textarea,
 	button {
 		grid-column: 1 / -1;
+	}
+
+	textarea {
+		resize: vertical;
 	}
 
 	button {

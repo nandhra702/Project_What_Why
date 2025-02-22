@@ -2,13 +2,13 @@
 	import Image from '$lib/components/Image.svelte';
 	import emblaCarouselSvelte from 'embla-carousel-svelte';
 
-	export let data;
+	let { data } = $props();
 
 	let { default: content, metadata } = data.post;
 
 	let emblaApi;
 	let options = { loop: true, align: 'center' };
-	let loop = true;
+	let loop = $state(true);
 
 	function emblaInit(event) {
 		emblaApi = event.detail;
@@ -22,6 +22,8 @@
 	function emblaPrev() {
 		emblaApi.scrollPrev();
 	}
+
+	const Content = $derived(content);
 </script>
 
 <main>
@@ -46,7 +48,7 @@
 		</p>
 	</div>
 	<!-- {#if metadata.images.length > 1} -->
-	<div class="embla" use:emblaCarouselSvelte={{ options }} on:emblaInit={emblaInit}>
+	<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
 		<div class="embla__container" class:loop>
 			{#each metadata.images as image}
 				<div class="embla__slide" class:tall={metadata.aspect_ratio === 'tall'}>
@@ -54,8 +56,8 @@
 				</div>
 			{/each}
 		</div>
-		<button class="embla__prev" on:click={emblaPrev}><span>&lt;-</span></button>
-		<button class="embla__next" on:click={emblaNext}><span>-></span></button>
+		<button class="embla__prev" onclick={emblaPrev}><span>&lt;-</span></button>
+		<button class="embla__next" onclick={emblaNext}><span>-></span></button>
 	</div>
 	<!-- {:else}
 		<div class="single-image">
@@ -63,7 +65,7 @@
 		</div>
 	{/if} -->
 	<div class="content">
-		<svelte:component this={content} />
+		<Content />
 	</div>
 </main>
 

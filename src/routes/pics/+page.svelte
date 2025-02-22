@@ -11,7 +11,7 @@
 	const entries = Object.entries(imports);
 	entries.reverse();
 
-	let images = [];
+	let images = $state([]);
 
 	async function loadImages() {
 		for (const [path, importFunc] of entries) {

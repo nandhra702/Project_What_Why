@@ -1,9 +1,7 @@
 <script>
 	import SVG from './SVG.svelte';
 
-	export let svg,
-		alt = '',
-		source = '';
+	let { svg, alt = '', source = '' } = $props();
 
 	source = source.replace(/</g, '').replace(/>/g, '');
 </script>

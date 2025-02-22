@@ -5,6 +5,8 @@
 	let { data } = $props();
 	let { default: content, metadata } = data.post;
 	let Icon = iconMap[metadata.icon];
+
+	const Content = $derived(content);
 </script>
 
 <main>
@@ -14,7 +16,7 @@
 	<p class="date">{formatDate(metadata.date)}</p>
 	<p class="description">{metadata.description}</p>
 	<div class="content">
-		{@render content()}
+		<Content />
 	</div>
 </main>
 

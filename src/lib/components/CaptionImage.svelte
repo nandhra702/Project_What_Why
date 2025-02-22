@@ -1,11 +1,7 @@
 <script>
 	import Image from './Image.svelte';
 
-	export let image,
-		alt = '',
-		source = '',
-		sizes = '',
-		loading = '';
+	let { image, alt = '', source = '', sizes = '', loading = '' } = $props();
 
 	source = source.replace(/</g, '').replace(/>/g, '');
 </script>

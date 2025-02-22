@@ -1,23 +1,7 @@
 <script>
 	import { page } from '$app/stores';
 
-	export let title;
-	export let description;
-	export let type = 'website';
-	export let image = null;
-
-	// async function importOgImage() {
-	// 	const images = import.meta.glob(`/src/content/*/*/*.{jpg,png}`, {
-	// 		eager: true,
-	// 		import: 'default'
-	// 	});
-	// 	for (const [path, src] of Object.entries(images)) {
-	// 		if (path.includes(image)) {
-	// 			console.log(src);
-	// 			return src;
-	// 		}
-	// 	}
-	// }
+	let { title, description, type = 'website', image = null } = $props();
 </script>
 
 <svelte:head>
@@ -40,6 +24,5 @@
 		<meta property="og:image:alt" content={title} />
 		<meta name="twitter:image" content={'https://www.refact0r.dev' + image.img.src} />
 		<meta name="twitter:image:alt" content={title} />
-		<!-- {/await} -->
 	{/if}
 </svelte:head>
