@@ -4,6 +4,7 @@ name: 'spatial page transitions'
 icon: 'code'
 description: intuitive page transitions that map website hierarchy to 2D space (in sveltekit)
 date: 2025-02-22
+ogImage: 'og-image.png'
 ---
 
 <script>
