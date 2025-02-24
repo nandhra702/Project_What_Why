@@ -46,6 +46,7 @@ ogImage: 'og-image.png'
         padding: 2rem;
         margin: 2rem 0;
         background: var(--bg-2);
+        width: fit-content;
     }
 
     .grid button {
@@ -99,6 +100,18 @@ ogImage: 'og-image.png'
         grid-column: 2;
     }
 
+    .scroll {
+        overflow-x: auto;
+    }
+
+    @media (max-width: 800px) {
+        .grid {
+            gap: 0.5rem;
+        }
+        .grid button {
+            padding: 0.5rem;
+        }
+    }
 </style>
 
 A while back, I added an interesting feature to my site. Lacking a better name, I've decided to call it "spatial page transitions". It's certainly not a novel concept, but I haven't really seen it in the web development space, so I thought I'd write a blog post about it.
@@ -117,23 +130,25 @@ You can create the layout however you like, but I chose to use a grid, with the 
 
 Here's a demonstration of my system. You can click on a box to simulate navigating to a page. The blue box represents what the user sees on their screen.
 
-<figure class="grid">
-    <div
-        class="active"
-        style:left="{activeRect.x}px"
-        style:top="{activeRect.y}px"
-        style:width="{activeRect.width}px"
-        style:height="{activeRect.height}px"
-    />
-    <button class="root" onclick={handleClick}>/</button>
-    <button class="projects" onclick={handleClick}>/projects</button>
-    <button class="blog" onclick={handleClick}>/blog</button>
-    <button class="pics" onclick={handleClick}>/pics</button>
-    <button class="about" onclick={handleClick}>/about</button>
-    <button class="contact" onclick={handleClick}>/contact</button>
-    <button class="projects-project" onclick={handleClick}>/projects/project</button>
-    <button class="blog-post" onclick={handleClick}>/blog/post</button>
-</figure>
+<div class="scroll">
+    <figure class="grid">
+        <div
+            class="active"
+            style:left="{activeRect.x}px"
+            style:top="{activeRect.y}px"
+            style:width="{activeRect.width}px"
+            style:height="{activeRect.height}px"
+        />
+        <button class="root" onclick={handleClick}>/</button>
+        <button class="projects" onclick={handleClick}>/projects</button>
+        <button class="blog" onclick={handleClick}>/blog</button>
+        <button class="pics" onclick={handleClick}>/pics</button>
+        <button class="about" onclick={handleClick}>/about</button>
+        <button class="contact" onclick={handleClick}>/contact</button>
+        <button class="projects-project" onclick={handleClick}>/projects/project</button>
+        <button class="blog-post" onclick={handleClick}>/blog/post</button>
+    </figure>
+</div>
 
 The root (/) page spans the entire top row because I wanted all pages to transition directly "upwards" to reach it. I also did not distinguish position for individual blog posts or projects, because navigating between them isn't very common.
 

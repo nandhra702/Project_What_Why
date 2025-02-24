@@ -28,6 +28,11 @@
 		padding: 1.5rem;
 	}
 
+	.content {
+		overflow-x: hidden;
+		max-width: 100%;
+	}
+
 	.date {
 		margin: 1rem 0;
 		font-size: 1.4rem;
