@@ -14,7 +14,9 @@
 			<a href={'/blog/' + post.slug} class="link">
 				<div class="date">{formatDate(post.date)}</div>
 				<h2>
-					<Icon class="icon" />{post.name}<span class="arrow">-></span>
+					{#if post.icon}
+						<Icon class="icon" />
+					{/if}{post.name}<span class="arrow">-></span>
 				</h2>
 				<div class="description">{post.description}</div>
 			</a>

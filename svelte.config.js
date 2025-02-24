@@ -1,6 +1,11 @@
 import adapter from '@sveltejs/adapter-static';
 import { mdsvex, escapeSvelte } from 'mdsvex';
 import { codeToHtml } from 'shiki';
+import {
+	transformerNotationDiff,
+	transformerMetaHighlight,
+	transformerNotationHighlight
+} from '@shikijs/transformers';
 
 const mdsvexOptions = {
 	extensions: ['.md'],
@@ -11,7 +16,12 @@ const mdsvexOptions = {
 				theme: 'catppuccin-mocha',
 				colorReplacements: {
 					'#1e1e2e': 'none'
-				}
+				},
+				transformers: [
+					transformerNotationDiff(),
+					transformerMetaHighlight(),
+					transformerNotationHighlight()
+				]
 			});
 			const escaped = escapeSvelte(html);
 			return `{@html \`${escaped}\` }`;

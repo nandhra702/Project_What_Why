@@ -6,9 +6,10 @@
 	import Logo from '$lib/components/Logo.svelte';
 	import PageHead from '$lib/components/PageHead.svelte';
 	import { fly } from 'svelte/transition';
+	import { prefersReducedMotion } from 'svelte/motion';
 	import { beforeNavigate } from '$app/navigation';
 
-	let { data, children } = $props();
+	let { children } = $props();
 
 	const pages = [
 		{ name: 'projects', path: '/projects' },
@@ -18,7 +19,7 @@
 		{ name: 'contact', path: '/contact' }
 	];
 
-	let currPage = $state(data.pathname);
+	let currPage = $state(page.url.pathname);
 	let prevPage = $state('');
 
 	beforeNavigate((navigation) => {
@@ -26,18 +27,19 @@
 			prevPage = currPage;
 			currPage = navigation.to.url.pathname;
 		}
+		console.log(currPage, prevPage);
 	});
 
-	function xy(path, isIn = true) {
-		if (path === prevPage) {
-			return { x: 0, y: 0 };
-		}
+	function transition(path, out) {
+		const cleanPath = path.replace(/\/$/, '');
+		const cleanPrevPath = prevPage.replace(/\/$/, '');
 
-		let currDepth = path.split('/').length;
-		let prevDepth = prevPage.split('/').length;
-		const getParentPath = (p) => '/' + p.split('/')[1];
-		const currParent = getParentPath(path);
-		const prevParent = getParentPath(prevPage);
+		let currDepth = cleanPath.split('/').length;
+		let prevDepth = cleanPrevPath.split('/').length;
+
+		const currParent = '/' + cleanPath.split('/')[1];
+		const prevParent = '/' + cleanPrevPath.split('/')[1];
+
 		let currParentIdx = pages.findIndex((page) => page.path === currParent);
 		let prevParentIdx = pages.findIndex((page) => page.path === prevParent);
 
@@ -50,10 +52,24 @@
 			prevDepth = 1;
 		}
 
-		const xDiff = currParentIdx - prevParentIdx;
-		const yDiff = currDepth - prevDepth;
+		let xDiff = currParentIdx - prevParentIdx;
+		let yDiff = currDepth - prevDepth;
 
-		return { x: `${isIn ? '' : '-'}${xDiff * 20}vh`, y: `${isIn ? '' : '-'}${yDiff * 20}vh` };
+		if (out) {
+			xDiff *= -1;
+			yDiff *= -1;
+		}
+		if (prefersReducedMotion.current) {
+			xDiff *= 0;
+			yDiff *= 0;
+		}
+
+		return {
+			duration: 150,
+			delay: out ? 0 : 50,
+			x: `${xDiff * 20}vh`,
+			y: `${yDiff * 20}vh`
+		};
 	}
 </script>
 
@@ -64,7 +80,7 @@
 	image={page.data.meta.image}
 />
 
-<header class:home={page.url.pathname === '/'}>
+<header class:home={page.url.pathname === '/'} data-sveltekit-noscroll>
 	<div class="row">
 		<a class="pfp" href="/" aria-label="homepage"><Logo --width="2rem" --height="2rem" /></a>
 		<a href="/"><h1>refact0r</h1></a>
@@ -77,19 +93,12 @@
 		{/each}
 	</nav>
 </header>
-<div class="container">
-	{#key data.pathname}
+<div class="container" data-sveltekit-noscroll>
+	{#key page.url.pathname}
 		<div
 			class="transition"
-			in:fly={{
-				duration: 100,
-				delay: 50,
-				...xy(data.pathname)
-			}}
-			out:fly={{
-				duration: 100,
-				...xy(data.pathname, false)
-			}}
+			in:fly={transition(page.url.pathname, false)}
+			out:fly={transition(page.url.pathname, true)}
 		>
 			{@render children?.()}
 		</div>
