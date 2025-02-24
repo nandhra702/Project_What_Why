@@ -158,8 +158,8 @@ To implement them in SvelteKit (with Svelte 5), we first need normal page transi
     {#key page.url.pathname}
         <div
             class="transition"
-            in:fly={{ duration: 300, delay: 150, y: -200 }}
-            out:fly={{ duration: 300, y: 200 }}
+            in:fly={{ duration: 150, delay: 50, y: -200 }}
+            out:fly={{ duration: 150, y: 200 }}
         >
             {@render children?.()}
         </div>
