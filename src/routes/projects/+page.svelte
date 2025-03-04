@@ -6,7 +6,6 @@
 
 <main>
 	<h1>projects</h1>
-
 	<div class="posts">
 		{#each data.posts as post}
 			<a href={'/projects/' + post.slug} class="link">

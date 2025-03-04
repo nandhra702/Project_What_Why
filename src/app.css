@@ -3,7 +3,7 @@
 	--bg-2: hsl(220, 10%, 11%);
 	--bg-3: hsl(220, 10%, 16%);
 	--txt-3: hsl(220, 11%, 35%);
-	--txt-2: hsl(220, 11%, 60%);
+	--txt-2: hsl(220, 14%, 55%);
 	--txt: hsl(220, 30%, 80%);
 	--txt-0: hsl(220, 45%, 90%);
 	--blue: hsl(190, 70%, 50%);
@@ -236,6 +236,23 @@ a.link {
 			width: auto;
 			transform: translateX(0);
 			opacity: 1;
+		}
+	}
+}
+
+a.back {
+	font-family: 'Space Mono';
+	font-size: 1.4rem;
+
+	.arrow {
+		display: inline-block;
+		margin-right: 0.5ch;
+		transition: 0.2s;
+		white-space: nowrap;
+	}
+	&:hover {
+		.arrow {
+			transform: translateX(-0.3em);
 		}
 	}
 }

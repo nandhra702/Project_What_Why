@@ -27,7 +27,10 @@
 </script>
 
 <main>
-	<div class="head">
+	<div class="head-1">
+		<a href="/projects" class="back"><span class="arrow">&lt;-</span>projects</a>
+	</div>
+	<div class="head-2">
 		<div class="row">
 			<h1>{metadata.name}</h1>
 			<div class="links">
@@ -47,7 +50,6 @@
 			{metadata.description}
 		</p>
 	</div>
-	<!-- {#if metadata.images.length > 1} -->
 	<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
 		<div class="embla__container" class:loop>
 			{#each metadata.images as image}
@@ -59,11 +61,6 @@
 		<button class="embla__prev" onclick={emblaPrev}><span>&lt;-</span></button>
 		<button class="embla__next" onclick={emblaNext}><span>-></span></button>
 	</div>
-	<!-- {:else}
-		<div class="single-image">
-			<Image image={metadata.images[0]} alt={metadata.description} />
-		</div>
-	{/if} -->
 	<div class="content">
 		<Content />
 	</div>
@@ -82,8 +79,15 @@
 		margin-right: auto;
 	}
 
-	.head {
-		margin: 1rem auto 3rem auto;
+	.head-1 {
+		margin: 1rem auto;
+		padding: 0 1.5rem;
+		width: 100%;
+		max-width: 53rem;
+	}
+
+	.head-2 {
+		margin: 1.25rem auto 2.5rem auto;
 		padding: 0 1.5rem;
 		width: 100%;
 		max-width: 53rem;
@@ -102,7 +106,7 @@
 
 		.description {
 			font-size: 1.2rem;
-			margin: 1.5rem 0 2rem 0;
+			margin: 1rem 0;
 			font-style: italic;
 			color: var(--txt-2);
 		}

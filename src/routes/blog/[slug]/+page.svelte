@@ -10,6 +10,9 @@
 </script>
 
 <main>
+	<div class="head">
+		<a href="/blog" class="back"><span class="arrow">&lt;-</span>blog</a>
+	</div>
 	<h1>
 		<Icon class="icon" />{metadata.name}
 	</h1>
@@ -34,21 +37,21 @@
 	}
 
 	.date {
-		margin: 1rem 0;
+		margin: 0.5rem 0;
 		font-size: 1.4rem;
 		font-family: 'Space Mono', monospace;
 	}
 
 	.description {
 		font-size: 1.2rem;
-		margin: 1rem 0 2rem 0;
+		margin: 0.5rem 0 1.5rem 0;
 		font-style: italic;
 		color: var(--txt-2);
 	}
 
 	h1 {
 		font-size: 2.5rem;
-		margin: 2rem 0;
+		margin: 1.25rem 0;
 		line-height: 1.3;
 	}
 

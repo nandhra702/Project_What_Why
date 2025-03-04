@@ -9,8 +9,7 @@
 			other: ['python', 'dart', 'java']
 		},
 		tech: {
-			frameworks: ['sveltekit', 'flutter', 'quart'],
-			databases: ['postgresl', 'sqlite', 'mongodb', 'isar'],
+			frameworks: ['sveltekit', 'flutter'],
 			cms: ['sanity', 'decap'],
 			tools: ['vscode', 'figma', 'inkscape']
 		}
