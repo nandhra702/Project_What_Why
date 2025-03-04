@@ -29,7 +29,7 @@
 		width: 100%;
 		max-width: 53rem;
 		margin: 0 auto 10rem auto;
-		padding: 1.5rem;
+		padding: 0 1.5rem;
 	}
 
 	.posts {
