@@ -29,6 +29,9 @@
 		</div>
 		<p>hey there! i'm a student interested in comp sci, web dev, design, and more.</p>
 		<nav>
+			<a class="nav" href="/about">
+				<span class="arrow">-></span><span class="slash">/</span>about
+			</a>
 			<a class="nav" href="/projects">
 				<span class="arrow">-></span><span class="slash">/</span>projects
 			</a>
@@ -37,9 +40,6 @@
 			</a>
 			<a class="nav" href="/pics">
 				<span class="arrow">-></span><span class="slash">/</span>pics
-			</a>
-			<a class="nav" href="/about">
-				<span class="arrow">-></span><span class="slash">/</span>about
 			</a>
 			<a class="nav" href="/contact">
 				<span class="arrow">-></span><span class="slash">/</span>contact

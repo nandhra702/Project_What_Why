@@ -145,9 +145,9 @@ These optimizations can be achieved using an html `<picture>` element with multi
 
 Generating all the different formats and sizes for each image manually is tedious, so I'd like to automate this process.
 
-SvelteKit actually has a built-in image component that can accomplish this, called `<enhanced:img>`. Back when I started building the site it was still quite buggy and did not fully support the type of dynamic importing I use for project/blog page images. The `svelte-image` library seemed to be a good solution, but I decided to write my own image component for simplicity and more fine-grained control.
+SvelteKit actually has a built-in image component that can accomplish this, called `&lt;enhanced:img&gt;`. Back when I started building the site it was still quite buggy and did not fully support the type of dynamic importing I use for project/blog page images. The `svelte-image` library seemed to be a good solution, but I decided to write my own image component for simplicity and more fine-grained control.
 
-Even though I am not using the `<enhanced:img>` component itself, I can still take advantage of its `enhanced` query to generate the different sizes and formats for each image. This relies on the amazing `vite-imagetools` plugin, which provides a ton of different directives for image processing.
+Even though I am not using the `&lt;enhanced:img&gt;` component itself, I can still take advantage of its `enhanced` query to generate the different sizes and formats for each image. This relies on the amazing `vite-imagetools` plugin, which provides a ton of different directives for image processing.
 
 To do this, `enhancedImages` needs to be added to `vite.fconfig.js`:
 
@@ -393,7 +393,7 @@ You can see from the page weight on right that the optimized site is much smalle
 
 ## conclusion
 
-There are still a few things I'd like to do, such as setting more detailed `sizes` attributes on all images and eventually using the `<enhanced:img>` component. But for now, I'm happy with the performance of my site.
+There are still a few things I'd like to do, such as setting more detailed `sizes` attributes on all images and eventually using the `&lt;enhanced:img&gt;` component. But for now, I'm happy with the performance of my site.
 
 All the source code is available on [GitHub](https://github.com/refact0r/personal).
 

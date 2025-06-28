@@ -12,10 +12,10 @@
 	let { children } = $props();
 
 	const pages = [
+		{ name: 'about', path: '/about' },
 		{ name: 'projects', path: '/projects' },
 		{ name: 'blog', path: '/blog' },
 		{ name: 'pics', path: '/pics' },
-		{ name: 'about', path: '/about' },
 		{ name: 'contact', path: '/contact' }
 	];
 

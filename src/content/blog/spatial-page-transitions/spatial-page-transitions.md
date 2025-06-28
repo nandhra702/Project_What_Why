@@ -138,7 +138,7 @@ Here's a demonstration of my system. You can click on a box to simulate navigati
             style:top="{activeRect.y}px"
             style:width="{activeRect.width}px"
             style:height="{activeRect.height}px"
-        />
+        ></div>
         <button class="root" onclick={handleClick}>/</button>
         <button class="projects" onclick={handleClick}>/projects</button>
         <button class="blog" onclick={handleClick}>/blog</button>
