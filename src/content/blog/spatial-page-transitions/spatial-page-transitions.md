@@ -71,19 +71,19 @@ ogImage: 'og-image.png'
         grid-row: 1;
         grid-column: 1 / -1;
     }
-    .projects {
+    .about {
         grid-row: 2;
         grid-column: 1;
     }
-    .blog {
+    .projects {
         grid-row: 2;
         grid-column: 2;
     }
-    .pics {
+    .blog {
         grid-row: 2;
         grid-column: 3;
     }
-    .about {
+    .pics {
         grid-row: 2;
         grid-column: 4;
     }
@@ -93,11 +93,11 @@ ogImage: 'og-image.png'
     }
     .projects-project {
         grid-row: 3;
-        grid-column: 1;
+        grid-column: 2;
     }
     .blog-post {
         grid-row: 3;
-        grid-column: 2;
+        grid-column: 3;
     }
 
     .scroll {
@@ -140,10 +140,10 @@ Here's a demonstration of my system. You can click on a box to simulate navigati
             style:height="{activeRect.height}px"
         ></div>
         <button class="root" onclick={handleClick}>/</button>
+        <button class="about" onclick={handleClick}>/about</button>
         <button class="projects" onclick={handleClick}>/projects</button>
         <button class="blog" onclick={handleClick}>/blog</button>
         <button class="pics" onclick={handleClick}>/pics</button>
-        <button class="about" onclick={handleClick}>/about</button>
         <button class="contact" onclick={handleClick}>/contact</button>
         <button class="projects-project" onclick={handleClick}>/projects/project</button>
         <button class="blog-post" onclick={handleClick}>/blog/post</button>
