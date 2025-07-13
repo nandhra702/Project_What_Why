@@ -241,7 +241,7 @@ a.link {
 }
 
 a.back {
-	font-family: 'Space Mono';
+	font-family: 'space mono', monospace;
 	font-size: 1.4rem;
 
 	.arrow {

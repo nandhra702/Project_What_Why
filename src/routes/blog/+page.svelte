@@ -6,7 +6,10 @@
 </script>
 
 <main>
-	<h1>blog</h1>
+	<div class="header">
+		<h1>blog</h1>
+		<a href="/blog/rss.xml" class="rss-link">rss</a>
+	</div>
 
 	<div class="posts">
 		{#each data.posts as post}
@@ -30,6 +33,22 @@
 		max-width: 53rem;
 		margin: 0 auto 10rem auto;
 		padding: 0 1.5rem;
+	}
+
+	.header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.rss-link {
+		font-family: 'Space Mono', monospace;
+		color: var(--txt-2);
+		text-decoration: none;
+	}
+
+	.rss-link:hover {
+		color: var(--txt);
 	}
 
 	.posts {
