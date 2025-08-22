@@ -1,6 +1,9 @@
 <script>
 	let { image, alt, sizes = '', loading = 'eager' } = $props();
 
+	// Check if the image is an external URL
+	const isExternalUrl = $derived(/^https?:\/\//.test(image));
+
 	async function importImage(image) {
 		const pictures = import.meta.glob(`/src/content/**/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}`, {
 			import: 'default',
@@ -18,20 +21,24 @@
 	}
 </script>
 
-<picture>
-	{#await importImage(image) then src}
-		<source srcset={src.sources.avif} type="image/avif" {sizes} />
-		<source srcset={src.sources.webp} type="image/webp" {sizes} />
-		<img
-			src={src.img.src}
-			{alt}
-			{loading}
-			width={src.img.w}
-			height={src.img.h}
-			onload={(e) => (e.target.style.opacity = 1)}
-		/>
-	{/await}
-</picture>
+{#if isExternalUrl}
+	<img src={image} {alt} {loading} {sizes} onload={(e) => (e.target.style.opacity = 1)} />
+{:else}
+	<picture>
+		{#await importImage(image) then src}
+			<source srcset={src.sources.avif} type="image/avif" {sizes} />
+			<source srcset={src.sources.webp} type="image/webp" {sizes} />
+			<img
+				src={src.img.src}
+				{alt}
+				{loading}
+				width={src.img.w}
+				height={src.img.h}
+				onload={(e) => (e.target.style.opacity = 1)}
+			/>
+		{/await}
+	</picture>
+{/if}
 
 <style>
 	picture {

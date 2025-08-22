@@ -27,7 +27,7 @@
 			<h1>refact0r</h1>
 			<div class="pfpstart"></div>
 		</div>
-		<p>hey there! i'm a student interested in comp sci, web dev, design, and more.</p>
+		<p>hey there! i'm a student interested in comp sci, web dev, ai, design, and more.</p>
 		<nav>
 			<a class="nav" href="/about">
 				<span class="arrow">-></span><span class="slash">/</span>about

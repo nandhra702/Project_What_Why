@@ -20,8 +20,8 @@
 	<h1>about</h1>
 	<p>
 		hey there! i'm a student in seattle who goes by the name refact0r online. i'm interested in comp
-		sci, web dev, design, among other topics. i'm passionate about building websites and apps that
-		are both functional and beautiful.
+		sci, web dev, ai, design, among other topics. i'm passionate about building things that are both
+		functional and beautiful.
 	</p>
 	<h2>links</h2>
 	<a href="https://github.com/refact0r" class="external icon">
