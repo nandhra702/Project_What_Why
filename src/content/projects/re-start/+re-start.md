@@ -1,7 +1,7 @@
 ---
 published: true
 name: re-start
-description: a tui-like browser startpage
+description: a tui-style browser startpage
 thumbnail: re-start.png
 images: [re-start.png]
 github: https://github.com/refact0r/re-start
@@ -13,7 +13,7 @@ date: 2025-07-07
     import CaptionImage from '$lib/components/CaptionImage.svelte';
 </script>
 
-Re-start is a tui-like browser startpage built with Svelte. The design was based on my [system24 discord theme](/projects/system24). Features include:
+Re-start is a tui-style browser startpage built with Svelte. The design was based on my [system24 discord theme](/projects/system24). Features include:
 
 - todoist tasks integrationz
 - weather (from open-meteo)

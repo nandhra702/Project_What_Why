@@ -1,5 +1,7 @@
 import { getPosts } from '$lib/js/posts.js';
 
+export const prerender = true;
+
 export async function GET() {
 	const modules = import.meta.glob('/src/content/blog/*/*.md');
 	let posts = await getPosts(modules);
