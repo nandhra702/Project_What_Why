@@ -69,17 +69,17 @@
 	}
 
 	.date {
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		font-family: 'Space Mono', monospace;
 		color: var(--txt-2);
-		margin-top: 0.2rem;
+		margin-top: 0.25rem;
 	}
 
 	a {
 		display: grid;
 		grid-template-columns: auto auto;
 		justify-content: left;
-		gap: 0.8rem 2rem;
+		gap: 0.5rem 2rem;
 	}
 
 	.description {

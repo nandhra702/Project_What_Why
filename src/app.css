@@ -49,9 +49,8 @@ h3,
 h4 {
 	font-family: 'Space Mono', monospace;
 	font-weight: 400;
-	line-height: 1.3;
+	line-height: 1.375;
 	color: var(--txt-0);
-	line-height: 1.3;
 	font-variant-ligatures: no-common-ligatures;
 	letter-spacing: -2%;
 }
@@ -62,25 +61,27 @@ h1 {
 }
 h2 {
 	font-size: 2rem;
-	margin: 2.5rem 0 1.25rem 0;
+	margin: 2.5rem 0 1rem 0;
 }
 h3 {
-	font-size: 1.4rem;
+	font-size: 1.375rem;
 	margin: 1.5rem 0 1rem 0;
 }
 h4 {
-	font-size: 1.1rem;
+	font-size: 1.125rem;
 	margin: 1.5rem 0 1rem 0;
 }
 
 p {
 	margin: 1rem 0;
+	font-size: 1.125rem;
+	line-height: 1.75;
 }
 
 code {
 	font-family: 'Space Mono', monospace;
 	background: var(--bg-2);
-	padding: 0 0.3em;
+	padding: 0 0.25em;
 	font-size: 1rem;
 	font-variant-ligatures: no-contextual;
 	color: #cdd6f4;
@@ -89,7 +90,7 @@ code {
 pre {
 	font-family: 'Space Mono', monospace;
 	background: var(--bg-2) !important;
-	padding: 0.75rem;
+	padding: 0.5rem 0.75rem;
 	overflow-x: auto;
 	max-width: calc(100vw - 3rem);
 
@@ -112,7 +113,6 @@ pre {
 }
 
 li {
-	font-size: 1.1rem;
 	margin: 0.5rem 0;
 }
 
@@ -137,11 +137,6 @@ button {
 	&:hover {
 		cursor: pointer;
 	}
-}
-
-p {
-	font-size: 1.1rem;
-	line-height: 1.75;
 }
 
 div.description {
@@ -209,7 +204,7 @@ a.external.icon {
 		vertical-align: sub;
 		margin-right: 0.75ch;
 		transform: translateY(6%);
-		font-size: 1.1em;
+		font-size: 1.125em;
 	}
 	.text {
 		text-decoration: underline transparent 2px;
@@ -242,7 +237,7 @@ a.link {
 
 a.back {
 	font-family: 'space mono', monospace;
-	font-size: 1.4rem;
+	font-size: 1.5rem;
 
 	.arrow {
 		display: inline-block;
@@ -301,7 +296,7 @@ figure {
 
 	ol,
 	ul {
-		font-size: 1.1rem;
+		font-size: 1.125rem;
 		line-height: 1.75;
 	}
 }

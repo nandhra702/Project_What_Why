@@ -69,7 +69,7 @@
 <style>
 	main {
 		width: 100%;
-		padding: 0 0rem 10rem 0rem;
+		padding: 1.5rem 0rem 10rem 0rem;
 		margin: auto;
 	}
 
@@ -80,14 +80,14 @@
 	}
 
 	.head-1 {
-		margin: 1rem auto;
+		margin: 0 auto;
 		padding: 0 1.5rem;
 		width: 100%;
 		max-width: 53rem;
 	}
 
 	.head-2 {
-		margin: 1.25rem auto 2.5rem auto;
+		margin: 1rem auto 2rem auto;
 		padding: 0 1.5rem;
 		width: 100%;
 		max-width: 53rem;
@@ -105,8 +105,8 @@
 		}
 
 		.description {
-			font-size: 1.2rem;
-			margin: 1rem 0;
+			font-size: 1.125rem;
+			margin: 0.5rem 0;
 			font-style: italic;
 			color: var(--txt-2);
 		}
@@ -116,7 +116,7 @@
 		width: 100%;
 		max-width: 53rem;
 		margin: auto;
-		margin-top: 3rem;
+		margin-top: 2rem;
 		padding: 0 1.5rem;
 	}
 
@@ -163,7 +163,8 @@
 			background: var(--bg-2);
 			width: 3rem;
 			height: 3rem;
-			line-height: 2.9rem;
+			line-height: 2.7rem;
+			border: 2px solid var(--bg-3);
 		}
 
 		&:hover span {
@@ -201,7 +202,7 @@
 	}
 
 	@media (max-width: 650px) {
-		.head {
+		.head-2 {
 			.row {
 				flex-wrap: wrap;
 			}

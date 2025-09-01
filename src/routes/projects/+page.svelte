@@ -24,20 +24,20 @@
 
 <style>
 	main {
-		padding: 0 5rem 5rem 5rem;
+		padding: 0 4rem 4rem 4rem;
 	}
 
 	.posts {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
-		gap: 2.5rem;
+		gap: 2rem;
 		max-width: 100%;
 	}
 
 	h2 {
-		margin: 1rem 0 0.5rem 0;
+		margin: 0.75rem 0 0.25rem 0;
 		color: var(--txt);
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 	}
 
 	a :global(picture) {

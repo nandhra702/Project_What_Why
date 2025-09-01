@@ -110,8 +110,8 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		padding: 0 5rem;
-		height: 6rem;
+		padding: 0 4rem;
+		height: 5rem;
 		overflow: hidden;
 		transition: transform 0.1s ease;
 		transform: translateY(0);
@@ -131,7 +131,7 @@
 			}
 
 			h1 {
-				font-size: 1.4rem;
+				font-size: 1.375rem;
 				color: var(--txt);
 				margin: 0;
 			}
@@ -142,7 +142,7 @@
 			gap: 2.5rem;
 
 			a {
-				font-size: 1.4rem;
+				font-size: 1.375rem;
 				font-family: 'Space Mono', monospace;
 			}
 		}

@@ -64,11 +64,11 @@
 	}
 	a {
 		font-family: 'Space Mono', monospace;
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 	}
 
 	.info {
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 		margin: 0.5rem 0;
 		font-family: 'Space Mono', monospace;
 
@@ -76,7 +76,7 @@
 			vertical-align: sub;
 			margin-right: 0.75ch;
 			transform: translateY(6%);
-			font-size: 1.1em;
+			font-size: 1.125em;
 		}
 	}
 
@@ -95,7 +95,7 @@
 		padding: 1rem;
 		color: inherit;
 		font: inherit;
-		font-size: 1.1rem;
+		font-size: 1.125rem;
 		border: 2px solid var(--bg-3);
 		transition: 0.2s;
 		background-color: var(--bg-2);
@@ -122,7 +122,7 @@
 
 	button {
 		font-family: 'Space Mono', monospace;
-		padding: 1rem 1.2rem;
+		padding: 1rem;
 		&:hover {
 			border: 2px solid var(--txt-2);
 		}

@@ -61,7 +61,7 @@
 	.row {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 1.5rem;
 	}
 
 	.pfpstart,
@@ -71,7 +71,7 @@
 	}
 
 	h1 {
-		font-size: 3.2rem;
+		font-size: 3rem;
 		margin: 0;
 	}
 
@@ -86,8 +86,8 @@
 	}
 
 	p {
-		font-size: 1.2rem;
-		margin: 1.25rem 0;
+		font-size: 1.25rem;
+		margin: 1rem 0;
 	}
 
 	@media (max-width: 600px) {

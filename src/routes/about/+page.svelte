@@ -4,12 +4,9 @@
 	import KofiIcon from '~icons/ph/coffee';
 
 	let content = {
-		languages: {
-			web: ['js', 'ts', 'html', 'css', 'scss'],
-			other: ['python', 'dart', 'java']
-		},
 		tech: {
-			frameworks: ['sveltekit', 'flutter'],
+			languages: ['js', 'ts', 'html', 'css', 'python', 'dart', 'java'],
+			frameworks: ['sveltekit', 'flutter', 'tensorflow'],
 			cms: ['sanity', 'decap'],
 			tools: ['vscode', 'figma', 'inkscape']
 		}
@@ -24,16 +21,18 @@
 		functional and beautiful.
 	</p>
 	<h2>links</h2>
-	<a href="https://github.com/refact0r" class="external icon">
-		<GithubIcon /><span class="text">github</span><span class="arrow">/></span>
-	</a>
-	<a href="https://discord.com/users/508863359777505290" class="external icon">
-		<DiscordIcon /><span class="text">discord</span><span class="arrow">/></span>
-	</a>
-	<a href="https://ko-fi.com/refact0r" class="external icon">
-		<KofiIcon /><span class="text">ko-fi</span><span class="arrow">/></span>
-	</a>
-	<h2>languages</h2>
+	<div class="links">
+		<a href="https://github.com/refact0r" class="external icon">
+			<GithubIcon /><span class="text">github</span><span class="arrow">/></span>
+		</a>
+		<a href="https://discord.com/users/508863359777505290" class="external icon">
+			<DiscordIcon /><span class="text">discord</span><span class="arrow">/></span>
+		</a>
+		<a href="https://ko-fi.com/refact0r" class="external icon">
+			<KofiIcon /><span class="text">ko-fi</span><span class="arrow">/></span>
+		</a>
+	</div>
+	<!-- <h2>languages</h2>
 	{#each Object.keys(content.languages) as category}
 		<div class="info">
 			{category} <span class="sub">-></span>
@@ -44,7 +43,7 @@
 				{/if}
 			{/each}
 		</div>
-	{/each}
+	{/each} -->
 	<h2>tech</h2>
 	{#each Object.keys(content.tech) as category}
 		<div class="info">
@@ -109,13 +108,13 @@
 
 	a {
 		font-family: 'Space Mono', monospace;
-		font-size: 1.2rem;
+		font-size: 1.25rem;
 		margin: 0.5rem 0;
 		display: block;
 	}
 
 	.info {
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		margin: 0.5rem 0;
 		font-family: 'Space Mono', monospace;
 	}
@@ -140,15 +139,15 @@
 
 	.colors {
 		display: inline-flex;
-		margin-top: 0.4rem;
+		margin-top: 0.5rem;
 		flex-wrap: wrap;
 	}
 
 	.color {
 		display: inline-block;
-		padding: 0 0.4rem;
+		padding: 0 0.5rem;
 		width: 5rem;
 		text-align: center;
-		font-size: 0.9em;
+		font-size: 1.125rem;
 	}
 </style>

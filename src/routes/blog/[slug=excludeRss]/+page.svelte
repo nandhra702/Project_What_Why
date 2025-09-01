@@ -38,12 +38,12 @@
 
 	.date {
 		margin: 0.5rem 0;
-		font-size: 1.4rem;
+		font-size: 1.375rem;
 		font-family: 'Space Mono', monospace;
 	}
 
 	.description {
-		font-size: 1.2rem;
+		font-size: 1.125rem;
 		margin: 0.5rem 0 1.5rem 0;
 		font-style: italic;
 		color: var(--txt-2);
@@ -51,8 +51,7 @@
 
 	h1 {
 		font-size: 2.5rem;
-		margin: 1.25rem 0;
-		line-height: 1.3;
+		margin: 1rem 0;
 	}
 
 	h1 :global(.icon) {
