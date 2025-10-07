@@ -1,29 +1,6 @@
 <script>
-	import { onMount } from 'svelte';
-
-	const imports = import.meta.glob('/src/content/images/*.{avif,gif,heif,jpeg,jpg,png,tiff,webp}', {
-		import: 'default',
-		query: {
-			enhanced: true,
-			w: '2000;1200;800'
-		}
-	});
-	const entries = Object.entries(imports);
-	entries.reverse();
-
-	let images = $state([]);
-
-	async function loadImages() {
-		for (const [path, importFunc] of entries) {
-			const src = await importFunc();
-			images.push(src);
-			images = images;
-		}
-	}
-
-	onMount(() => {
-		loadImages();
-	});
+	let { data } = $props();
+	const images = data.images;
 </script>
 
 <main>
