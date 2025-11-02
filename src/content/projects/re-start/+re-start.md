@@ -15,7 +15,7 @@ date: 2025-07-07
 
 Re-start is a tui-style browser startpage built with Svelte. The design was based on my [system24 discord theme](/projects/system24). Features include:
 
-- todoist tasks integrationz
+- todoist tasks integration
 - weather (from open-meteo)
 - customizable quick links
 - stats (load time, ping, fps, viewport size)

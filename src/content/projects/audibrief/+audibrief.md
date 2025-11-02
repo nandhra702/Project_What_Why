@@ -11,7 +11,7 @@ date: 2024-02-18
 
 Audibrief is a web app that provides quick audio summaries of the daily news. It gets the top 5 news articles of the day from Google News and then uses AI to summarize and narrate them, creating easily digestible 1 minute audio summaries.
 
-This project won 2nd place at EmP SmartHack Spring 2024.
+This project won 2nd place at EmP Hackfest Spring 2024.
 
 Audibrief consists of a Sveltekit frontend and a Python Quart API server. The server gets the top 5 news articles from Google News' RSS feed and crawls them. The article content is then sent to OpenAI's GPT-3.5 Turbo to generate a summary. The summary is sent to either Elevenlabs' Turbo v2 or OpenAI's TTS-1 to generate the narrated audio. The frontend is very simple due to time constraints, but it does display all of the text and audio summaries and allow the user to play all of them sequentially.
 
