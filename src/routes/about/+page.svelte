@@ -2,6 +2,7 @@
 	import GithubIcon from '~icons/ph/github-logo';
 	import DiscordIcon from '~icons/ph/discord-logo';
 	import KofiIcon from '~icons/ph/coffee';
+	import XIcon from '~icons/ph/x-logo';
 
 	let content = {
 		tech: {
@@ -16,14 +17,17 @@
 <main>
 	<h1>about</h1>
 	<p>
-		hey there! i'm a student in seattle who goes by the name refact0r online. i'm interested in comp
-		sci, web dev, ai, design, among other topics. i'm passionate about building things that are both
+		hey there! i'm yifan, a cs student at uw in seattle. i also go by the name refact0r online. i'm
+		interested in ai, web dev, design, among other topics. i love making things that are both
 		functional and beautiful.
 	</p>
 	<h2>links</h2>
 	<div class="links">
 		<a href="https://github.com/refact0r" class="external icon">
 			<GithubIcon /><span class="text">github</span><span class="arrow">/></span>
+		</a>
+		<a href="https://x.com/refact_r" class="external icon">
+			<XIcon /><span class="text">x/twitter</span><span class="arrow">/></span>
 		</a>
 		<a href="https://discord.com/users/508863359777505290" class="external icon">
 			<DiscordIcon /><span class="text">discord</span><span class="arrow">/></span>
