@@ -17,4 +17,4 @@ System24 is a Discord theme that mimics the aesthetics of old-school text-based 
 
 Unexpectedly, system24 ended up becoming my most starred project! Thanks to a r/unixporn reddit post and a viral [tweet](https://x.com/umgbhalla/status/1832474169478672687), it gained over 600 stars in a few days, quickly becoming my first project to reach 1k stars.
 
-<CaptionImage image="https://api.star-history.com/svg?repos=refact0r/system24&type=Date" alt="system24 github star history." source="https://star-history.com/#refact0r/system24&Date" sizes="50rem"/>
+<CaptionImage image="https://api.star-history.com/svg?repos=refact0r/system24&type=Date" alt="system24 github star history" source="https://star-history.com/#refact0r/system24&Date" sizes="50rem"/>

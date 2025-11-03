@@ -14,9 +14,9 @@ date: 2025-10-19
 
 DubFlow is a smart focus tracker that keeps you accountable in the cutest way possible. It's a desktop app/overlay that uses both webcam video and window monitoring to recognize when you're focused or distracted. Your on-screen companion, Dubs (the UW mascot), reacts in real time to your behavior.
 
-This project was created for DubHacks 2025.
+This project was created for [DubHacks 2025](https://dubhacks25.devpost.com/).
 
-<CaptionImage image="dubs.gif" alt="Dubs sleeps when you're focused." sizes="20rem" --width="20rem" />
+<CaptionImage image="dubs.gif" alt="dubs sleeps when you're focused" sizes="20rem" --width="20rem" />
 
 ## the idea
 
@@ -32,7 +32,7 @@ There are two ways to trigger a distracted state: looking away from the screen o
 
 DubFlow is built with SvelteKit and Electron. The architecture combines multiple data sources to create a complete picture of your focus state.
 
-<CaptionImage image="diagram.jpg" alt="System architecture diagram of the main distraction flow." sizes="50rem" />
+<CaptionImage image="dubflow/diagram.jpg" alt="system architecture diagram of the main distraction flow" sizes="50rem" />
 
 The vision processing component uses OpenCV locally for real-time eye tracking and AWS Rekognition for detailed context analysis. Rekognition detects distracting objects in the frame such as phones, drinks, or other devices. For window monitoring, we use get-windows to track active applications and websites.
 
@@ -50,6 +50,6 @@ Integrating AWS Rekognition and Bedrock came with its own hurdles. We worked har
 
 I'm proud that we built a tool we'd actually use ourselves! Even as we were developing DubFlow, I found myself using Dubs to stay positive and productive during the hackathon.
 
-My biggest learning was managing a project with many different parts. This was definitely the most technically complex hackathon project I've worked on. I pushed for creating a clear system architecture diagram early on, which helped immensely with implementation and collaboration.
+My biggest learning was managing a project with many different parts. This was definitely the most technically complex hackathon project I've worked on. I pushed for creating a clear system architecture diagram early on, which helped greatly with implementation and collaboration. I also pushed for a unified distraction manager class to manage state, which took like 2 hours to properly refactor (sorry Berkan), but I think was worth it in the end.
 
-Plus, our Dubs is super cute. (All animations and sprites 100% hand drawn by my teammate Derek!)
+Plus, Dubs is super cute. (All animations and sprites 100% hand drawn by my teammate Derek!)

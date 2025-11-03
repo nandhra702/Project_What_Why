@@ -141,7 +141,7 @@
 
 		&.tall {
 			flex: 0 0 20%;
-			max-width: 20rem;
+			max-width: 25rem;
 		}
 	}
 	.embla__prev,
