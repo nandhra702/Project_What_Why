@@ -27,9 +27,9 @@ Researching past digital solutions for small farmers (like DigitalGreen's Farmer
 
 Demeter features multiple different tools that work together to give farmers a complete picture of their farm's health:
 
-**Satellite imagery and analysis** shows satellite images of vegetation and moisture across the farm. The app uses this data to make recommendations for preventing issues like drought.
+**Satellite imagery and analysis** shows satellite maps of vegetation and moisture across the farm. The app uses this data to make recommendations for preventing issues like drought.
 
-**Topsoil and environmental health tools** display soil pH levels and other environmental data like nitrogen levels across the farm. If Demeter detects excessively acidic pH levels, it will recommend actions like liming to neutralize the soil.
+**Soil and environmental health tools** display soil pH levels and other environmental data like nitrogen levels across the farm. If Demeter detects excessively acidic pH levels, it will recommend actions like liming to neutralize the soil.
 
 **Market data and analysis** provides real-time commodity prices, helping small farmers make informed decisions about harvesting, selling, and pricing their produce.
 
