@@ -93,9 +93,9 @@
 	}
 
 	@media (max-width: 600px) {
-		a {
+		.link {
 			grid-template-columns: auto;
-			gap: 0.8rem;
+			gap: 0.5rem;
 
 			.description {
 				grid-column: 1;
