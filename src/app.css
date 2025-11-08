@@ -220,6 +220,7 @@ a.external.icon {
 a.link {
 	.arrow {
 		display: inline-block;
+		width: 0;
 		margin-left: 0.5ch;
 		opacity: 0;
 		transform: translateX(-0.6em);
@@ -228,7 +229,6 @@ a.link {
 	}
 	&:hover {
 		.arrow {
-			width: auto;
 			transform: translateX(0);
 			opacity: 1;
 		}
