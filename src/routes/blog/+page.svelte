@@ -8,7 +8,7 @@
 
 <main>
 	<div class="header">
-		<h1>blog</h1>
+		<h1>blog<span class="count" aria-label="{data.posts.length} posts">[{data.posts.length}]</span></h1>
 		<a href="/blog/rss.xml" class="rss-link"><RssIcon /> rss</a>
 	</div>
 
@@ -68,6 +68,10 @@
 		font-size: 1.5rem;
 		margin: 0;
 		color: var(--txt);
+	}
+
+	.count {
+		color: var(--bg-3);
 	}
 
 	h2 :global(.icon) {
