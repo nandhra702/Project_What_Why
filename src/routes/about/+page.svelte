@@ -56,7 +56,7 @@
 			{/each}
 		</div>
 	{/each}
-	<h2>this site</h2>
+	<h2>colophon</h2>
 	<a href="https://github.com/refact0r/personal" class="external"
 		>github repo<span class="arrow">/></span></a
 	>
@@ -85,11 +85,25 @@
 			<div class="color" style="background: var(--blue); color: var(--bg);">blue</div>
 		</div>
 	</div>
-	<h2>webring</h2>
+	<h2>other</h2>
+	<div class="info">
+		<a class="card" href="/" rel="nofollow">
+			<img src="/88x31.png" alt="refact0r" />
+		</a>
+		<a class="card" href="https://enochlau.com" rel="nofollow">
+			<img src="https://enochlau.com/88x31.webp" alt="tnixc" />
+		</a>
+		<a class="card" href="https://www.sadan.zip" rel="nofollow">
+			<img src="https://www.sadan.zip/assets/88x31.png" alt="sadan" />
+		</a>
+		<a class="card" href="https://vendicated.dev" rel="nofollow">
+			<img src="https://vendicated.dev/_astro/me.D0UvsSv8.gif" alt="ven" />
+		</a>
+	</div>
 	<div class="info">
 		<a class="webring previous" href="https://ctp-webr.ing/refact0r/previous">
 			<span> &lt;- </span>&nbsp;
-		</a><a class="webring home" href="https://ctp-webr.ing/">catppuccin webring</a><a
+		</a><a class="webring home" href="https://ctp-webr.ing/">ctp webring</a><a
 			class="webring next"
 			href="https://ctp-webr.ing/refact0r/next"
 		>
@@ -134,6 +148,19 @@
 		}
 		&.previous:hover span {
 			transform: translateX(-0.3em);
+		}
+	}
+
+	.card {
+		margin: 0;
+		display: inline;
+		width: 88px;
+		height: 31px;
+
+		img {
+			image-rendering: pixelated;
+			width: 88px;
+			height: 31px;
 		}
 	}
 
