@@ -141,7 +141,7 @@
 
 		&.tall {
 			flex: 0 0 20%;
-			max-width: 20rem;
+			max-width: 25rem;
 		}
 	}
 	.embla__prev,
@@ -182,7 +182,10 @@
 	@media (max-width: 850px) {
 		.embla__slide {
 			flex: 0 0 calc(100% - 3rem);
-			max-width: 50rem;
+
+			&.tall {
+				flex: 0 0 calc(100% - 3rem);
+			}
 		}
 		.embla__prev,
 		.embla__next {
@@ -190,14 +193,6 @@
 			span {
 				opacity: 1;
 			}
-		}
-		.embla__prev {
-			text-align: left;
-			padding-left: 1rem;
-		}
-		.embla__next {
-			text-align: right;
-			padding-right: 1rem;
 		}
 	}
 

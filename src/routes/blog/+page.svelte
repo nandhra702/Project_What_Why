@@ -1,14 +1,15 @@
 <script>
 	import { formatDate } from '$lib/js/utils.js';
 	import { iconMap } from '$lib/js/icons.js';
+	import RssIcon from '~icons/ph/rss';
 
 	let { data } = $props();
 </script>
 
 <main>
 	<div class="header">
-		<h1>blog</h1>
-		<a href="/blog/rss.xml" class="rss-link">rss</a>
+		<h1>blog<span class="count" aria-label="{data.posts.length} posts">[{data.posts.length}]</span></h1>
+		<a href="/blog/rss.xml" class="rss-link"><RssIcon /> rss</a>
 	</div>
 
 	<div class="posts">
@@ -45,6 +46,11 @@
 		font-family: 'Space Mono', monospace;
 		color: var(--txt-2);
 		text-decoration: none;
+
+		:global(svg) {
+			font-size: 1.125em;
+			vertical-align: middle;
+		}
 	}
 
 	.rss-link:hover {
@@ -64,6 +70,10 @@
 		color: var(--txt);
 	}
 
+	.count {
+		color: var(--bg-3);
+	}
+
 	h2 :global(.icon) {
 		margin-right: 0.75ch;
 	}
@@ -75,7 +85,7 @@
 		margin-top: 0.25rem;
 	}
 
-	a {
+	.link {
 		display: grid;
 		grid-template-columns: auto auto;
 		justify-content: left;
@@ -87,9 +97,9 @@
 	}
 
 	@media (max-width: 600px) {
-		a {
+		.link {
 			grid-template-columns: auto;
-			gap: 0.8rem;
+			gap: 0.5rem;
 
 			.description {
 				grid-column: 1;

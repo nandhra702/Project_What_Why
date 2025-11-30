@@ -5,7 +5,11 @@
 </script>
 
 <main>
-	<h1>projects</h1>
+	<h1>
+		projects<span class="count" aria-label="{data.posts.length} projects"
+			>[{data.posts.length}]</span
+		>
+	</h1>
 	<div class="posts">
 		{#each data.posts as post}
 			<a href={'/projects/' + post.slug} class="link">
@@ -38,6 +42,10 @@
 		margin: 0.75rem 0 0.25rem 0;
 		color: var(--txt);
 		font-size: 1.5rem;
+	}
+
+	.count {
+		color: var(--bg-3);
 	}
 
 	a :global(picture) {

@@ -22,5 +22,6 @@
 		font-size: 1rem;
 		text-align: center;
 		margin-top: 1.5rem;
+		color: var(--txt-2);
 	}
 </style>

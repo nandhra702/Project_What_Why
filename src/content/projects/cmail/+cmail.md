@@ -9,9 +9,9 @@ website: https://cmail.vercel.app
 date: 2024-09-07
 ---
 
-Cmail is a web messaging platform that simulates communication between planets in our solar system. \
+Cmail is a web messaging platform that simulates communication between planets in our solar system.
 
-The project was created for the Fall 2024 EmP Hackfest by [me](https://github.com/refact0r), [shibest](https://github.com/shibest), [ben-6](https://github.com/ben-6), and [raymon-zhang](https://github.com/raymon-zhang). We won 1st place in Group 3.
+The project was created for EmP Hackfest Fall 2024. It won 1st place.
 
 ## the idea
 

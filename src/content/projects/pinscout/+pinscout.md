@@ -11,7 +11,7 @@ date: 2025-02-20
 
 pinScout is a crowdsourced, gamified urban exploration map. Users can create pins to label things ranging from restrooms to historical landmarks. Once a pin has been created, users can submit images or reviews to provide additional information about it. We planned to include a gamified aspect (but didn't have enough time to full implement it) where users would earn points from participating. There would also be leaderboards and challenges to further motivate users to explore their cities.
 
-pinScout was created for EmP Hackfest Winter 2025, and won 3rd place in Group 2.
+pinScout was created for [EmP Hackfest Winter 2025](https://winter-2025-emp-hackfest.devpost.com/), and won 3rd place.
 
 ## motivation
 

@@ -1,8 +1,12 @@
 <script>
 	import DiscordIcon from '~icons/ph/discord-logo';
 	import EmailIcon from '~icons/ph/envelope';
+	import CopyIcon from '~icons/ph/copy';
+	import CheckIcon from '~icons/ph/check';
 
 	let status = $state('submit ->');
+	let emailCopied = $state(false);
+	let discordCopied = $state(false);
 
 	const handleSubmit = async (data) => {
 		data.preventDefault();
@@ -27,22 +31,48 @@
 			status = 'message sent!';
 		}
 	};
+
+	const copyEmail = async () => {
+		await navigator.clipboard.writeText('refact0r.contact@gmail.com');
+		emailCopied = true;
+		setTimeout(() => (emailCopied = false), 1000);
+	};
+
+	const copyDiscord = async () => {
+		await navigator.clipboard.writeText('refact0r');
+		discordCopied = true;
+		setTimeout(() => (discordCopied = false), 1000);
+	};
 </script>
 
 <main>
 	<h1>contact</h1>
-	<p>ways to get in touch, in order from fastest to slowest.</p>
-	<div class="info">
-		<DiscordIcon />discord <span class="sub">-></span>
-		<a href="https://discord.com/users/508863359777505290" class="external"
-			>refact0r<span class="arrow">/></span>
-		</a>
-	</div>
+	<p>ways to get in touch.</p>
 	<div class="info">
 		<EmailIcon />email <span class="sub">-></span>
 		<a href="mailto:refact0r.contact@gmail.com" class="external"
 			>refact0r.contact@gmail.com<span class="arrow">/></span>
 		</a>
+		<button class="copy-btn" onclick={copyEmail} aria-label="Copy email">
+			{#if emailCopied}
+				<CheckIcon />
+			{:else}
+				<CopyIcon />
+			{/if}
+		</button>
+	</div>
+	<div class="info">
+		<DiscordIcon />discord <span class="sub">-></span>
+		<a href="https://discord.com/users/508863359777505290" class="external"
+			>refact0r<span class="arrow">/></span>
+		</a>
+		<button class="copy-btn" onclick={copyDiscord} aria-label="Copy Discord username">
+			{#if discordCopied}
+				<CheckIcon />
+			{:else}
+				<CopyIcon />
+			{/if}
+		</button>
 	</div>
 	<br />
 	<br />
@@ -77,6 +107,27 @@
 			margin-right: 0.75ch;
 			transform: translateY(6%);
 			font-size: 1.125em;
+		}
+	}
+
+	.copy-btn {
+		background: none;
+		border: none !important;
+		cursor: pointer;
+		padding: 0rem;
+		display: inline-flex;
+		align-items: center;
+		transition: color 0.2s;
+		vertical-align: sub;
+		transform: translateY(-4%);
+
+		:global(svg) {
+			font-size: 1.125rem;
+			margin: 0;
+		}
+
+		&:hover {
+			color: var(--txt-1);
 		}
 	}
 

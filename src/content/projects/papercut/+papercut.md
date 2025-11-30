@@ -11,7 +11,7 @@ date: 2024-03-02
 
 Finding relevant sources to an investigation is a repetitive and surprisingly difficult task. Titles of research papers are often not truly indicative of the content, leading to missed gold and false prophets. Papercut is a web app designed to help find academic sources in a more streamlined manner. Specifically, it is a search engine for arXiv that provides AI-generated summaries of papers. Relevant sources can be saved to a list for later reference.
 
-This project was created for [HackPNW](https://hackpnw.org/) Spring 2024 by [me](https://github.com/refact0r), [shibest](https://github.com/shibest), and [ben-6](https://github.com/ben-6) and [NicoNekoru](https://github.com/NicoNekoru). We won runner-up for Best Design.
+This project was created for [HackPNW](https://hackpnw.org/) Spring 2024. It won runner-up for Best Design.
 
 Like many of my projects, Papercut is a SvelteKit web app. The search engine itself uses the arXiv API to get papers. I applied my learnings from the [Audibrief](/projects/audibrief) project, and used the serverless backend of SvelteKit to call the OpenAI API to summarize the papers. I would've liked to actually summarize entire papers, but ultimately, we were only able to summarize the abstracts.
 
