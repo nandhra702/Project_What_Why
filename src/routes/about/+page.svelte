@@ -89,7 +89,7 @@
 			<div class="color" style="background: var(--blue); color: var(--bg);">blue</div>
 		</div>
 	</div>
-	<h2>other</h2>
+	<h2>indieweb</h2>
 	<div class="info">
 		<a class="card" href="/" rel="nofollow">
 			<img src="/88x31.png" alt="refact0r" />
