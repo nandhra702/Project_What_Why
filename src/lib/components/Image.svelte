@@ -38,21 +38,25 @@
 	<img src={image} {alt} {loading} {sizes} onload={(e) => (e.target.style.opacity = 1)} />
 {:else if isGif}
 	{#await importImage(image) then src}
-		<img {src} {alt} {loading} onload={(e) => (e.target.style.opacity = 1)} />
+		{#if src}
+			<img {src} {alt} {loading} onload={(e) => (e.target.style.opacity = 1)} />
+		{/if}
 	{/await}
-{:else}
+{:else if image}
 	<picture>
 		{#await importImage(image) then src}
-			<source srcset={src.sources.avif} type="image/avif" {sizes} />
-			<source srcset={src.sources.webp} type="image/webp" {sizes} />
-			<img
-				src={src.img.src}
-				{alt}
-				{loading}
-				width={src.img.w}
-				height={src.img.h}
-				onload={(e) => (e.target.style.opacity = 1)}
-			/>
+			{#if src}
+				<source srcset={src.sources.avif} type="image/avif" {sizes} />
+				<source srcset={src.sources.webp} type="image/webp" {sizes} />
+				<img
+					src={src.img.src}
+					{alt}
+					{loading}
+					width={src.img.w}
+					height={src.img.h}
+					onload={(e) => (e.target.style.opacity = 1)}
+				/>
+			{/if}
 		{/await}
 	</picture>
 {/if}

@@ -63,4 +63,4 @@ We may update this privacy policy from time to time. Changes will be reflected i
 
 ## Contact Us
 
-If you have questions about this privacy policy, please contact us through our GitHub repository: <https://github.com/refact0r/re-start>
+If you have questions about this privacy policy, please contact us at: <refact0r.contact@gmail.com>

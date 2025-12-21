@@ -62,7 +62,7 @@ These terms shall be governed by and construed in accordance with applicable law
 
 ## Contact
 
-If you have any questions about these Terms of Service, please contact us through our GitHub repository: <https://github.com/refact0r/re-start>
+If you have any questions about these Terms of Service, please contact us at: <refact0r.contact@gmail.com>
 
 ## Entire Agreement
 
