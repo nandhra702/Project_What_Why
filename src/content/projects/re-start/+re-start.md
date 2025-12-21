@@ -40,3 +40,7 @@ This seems like a simple project, but there were a couple challenges.
 ## thoughts
 
 I'm pretty happy with how re-start turned out. It's something that actually helps me on a daily basis, and I hope others find it useful too.
+
+---
+
+[privacy policy](/projects/re-start/privacy-policy) • [terms of service](/projects/re-start/terms-of-service)
