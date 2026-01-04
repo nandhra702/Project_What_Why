@@ -22,7 +22,7 @@ re-start is a tui-style browser startpage built with Svelte. The design was base
 - stats (load time, ping, fps, viewport size)
 - multiple color themes
 - custom css support
-- lightweight & performant (~100kb including fonts, loads in <50ms)
+- lightweight & performant (~100kb including fonts, loads in &lt;50ms)
 
 ## motivation
 
