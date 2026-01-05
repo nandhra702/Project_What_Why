@@ -144,16 +144,6 @@ div.description {
 	color: var(--txt-2);
 }
 
-.pfp {
-	border-radius: 50%;
-	transition: transform 1.5s;
-
-	&:hover {
-		cursor: pointer;
-		transform: rotate(360deg);
-	}
-}
-
 a.nav {
 	position: relative;
 	.arrow {

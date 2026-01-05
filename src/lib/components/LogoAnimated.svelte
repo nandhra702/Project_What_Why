@@ -1,15 +1,19 @@
 <script>
 	import { onMount } from 'svelte';
 
-	let initialLoadComplete = false;
-	let isHovering = false;
-	let isAnimating = false;
+	let { skipInitialAnimation = false } = $props();
+
+	let initialLoadComplete = $state(skipInitialAnimation);
+	let isHovering = $state(false);
+	let isAnimating = $state(false);
 
 	onMount(() => {
-		// Wait for initial load to complete
-		setTimeout(() => {
-			initialLoadComplete = true;
-		}, 3000); // 3s
+		// Wait for initial load to complete, or skip if prop is set
+		if (!skipInitialAnimation) {
+			setTimeout(() => {
+				initialLoadComplete = true;
+			}, 3000); // 3s
+		}
 	});
 
 	function handleMouseEnter() {
@@ -43,15 +47,13 @@
 </script>
 
 <svg
-	width="100%"
-	height="100%"
 	viewBox="0 0 300 300"
 	xmlns="http://www.w3.org/2000/svg"
-	style="display: block; cursor: {initialLoadComplete ? 'pointer' : 'default'};"
+	style="cursor: {initialLoadComplete ? 'pointer' : 'default'};"
 	role="img"
 	aria-label="Animated logo"
-	on:mouseenter={handleMouseEnter}
-	on:mouseleave={handleMouseLeave}
+	onmouseenter={handleMouseEnter}
+	onmouseleave={handleMouseLeave}
 >
 	<defs>
 		<style>
@@ -156,17 +158,17 @@
 				}
 			}
 
-			.spinner-line1 {
+			.spinner-line1:not(.complete) {
 				animation: initial-load-180 3s cubic-bezier(0.55, 0.06, 0.36, 1) forwards;
 				transform-origin: 150px 150px;
 			}
 
-			.spinner-line2 {
+			.spinner-line2:not(.complete) {
 				animation: initial-load-420 3s cubic-bezier(0.55, 0.06, 0.36, 1) forwards;
 				transform-origin: 150px 150px;
 			}
 
-			.spinner-line3 {
+			.spinner-line3:not(.complete) {
 				animation: initial-load-660 3s cubic-bezier(0.55, 0.06, 0.36, 1) forwards;
 				transform-origin: 150px 150px;
 			}
@@ -175,38 +177,45 @@
 			.spinner-line1.complete:not(.animating) {
 				animation: none;
 				transform: rotate(180deg) scaleX(1);
+				transform-origin: 150px 150px;
 			}
 
 			.spinner-line2.complete:not(.animating) {
 				animation: none;
 				transform: rotate(420deg) scaleX(1);
+				transform-origin: 150px 150px;
 			}
 
 			.spinner-line3.complete:not(.animating) {
 				animation: none;
 				transform: rotate(660deg) scaleX(1);
+				transform-origin: 150px 150px;
 			}
 
 			/* Hover animation - runs exactly once */
 			.spinner-line1.animating {
 				animation: hover-loop-180 4s cubic-bezier(0.55, 0.06, 0.36, 1) 1 forwards !important;
+				transform-origin: 150px 150px;
 			}
 
 			.spinner-line2.animating {
 				animation: hover-loop-420 4s cubic-bezier(0.55, 0.06, 0.36, 1) 1 forwards !important;
+				transform-origin: 150px 150px;
 			}
 
 			.spinner-line3.animating {
 				animation: hover-loop-660 4s cubic-bezier(0.55, 0.06, 0.36, 1) 1 forwards !important;
+				transform-origin: 150px 150px;
 			}
 		</style>
 	</defs>
 	<!-- Line 3 (Purple) - bottom layer -->
 	<g
 		class="spinner-line3"
+
 		class:complete={initialLoadComplete}
 		class:animating={isAnimating}
-		on:animationend={handleAnimationEnd}
+		onanimationend={handleAnimationEnd}
 	>
 		<line
 			x1="27.92"
@@ -221,9 +230,10 @@
 	<!-- Line 2 (Blue) - middle layer -->
 	<g
 		class="spinner-line2"
+
 		class:complete={initialLoadComplete}
 		class:animating={isAnimating}
-		on:animationend={handleAnimationEnd}
+		onanimationend={handleAnimationEnd}
 	>
 		<line
 			x1="27.92"
@@ -238,9 +248,10 @@
 	<!-- Line 1 (Cyan/Teal) - top layer -->
 	<g
 		class="spinner-line1"
+
 		class:complete={initialLoadComplete}
 		class:animating={isAnimating}
-		on:animationend={handleAnimationEnd}
+		onanimationend={handleAnimationEnd}
 	>
 		<line
 			x1="27.92"
@@ -253,3 +264,11 @@
 		/>
 	</g>
 </svg>
+
+<style>
+	svg {
+		display: block;
+		width: 100%;
+		height: 100%;
+	}
+</style>

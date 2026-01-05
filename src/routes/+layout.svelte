@@ -3,7 +3,7 @@
 	import '$lib/assets/fonts/space-mono.css';
 	import '$lib/assets/fonts/space-grotesk.css';
 	import { page } from '$app/state';
-	import Logo from '$lib/components/Logo.svelte';
+	import LogoAnimated from '$lib/components/LogoAnimated.svelte';
 	import PageHead from '$lib/components/PageHead.svelte';
 	import { fly } from 'svelte/transition';
 	import { prefersReducedMotion } from 'svelte/motion';
@@ -82,7 +82,9 @@
 
 <header class:home={page.url.pathname === '/'} data-sveltekit-noscroll>
 	<div class="row">
-		<a class="pfp" href="/" aria-label="homepage"><Logo --width="2rem" --height="2rem" /></a>
+		<a class="pfp" href="/" aria-label="homepage">
+			<LogoAnimated skipInitialAnimation={true} />
+		</a>
 		<a href="/"><h1>refact0r</h1></a>
 	</div>
 	<nav>
@@ -128,6 +130,8 @@
 
 			.pfp {
 				display: flex;
+				width: 2rem;
+				height: 2rem;
 			}
 
 			h1 {
