@@ -33,7 +33,7 @@
 	};
 
 	const copyEmail = async () => {
-		await navigator.clipboard.writeText('hello@refact0r.dev');
+		await navigator.clipboard.writeText('refact0r.contact@gmail.com');
 		emailCopied = true;
 		setTimeout(() => (emailCopied = false), 1000);
 	};
@@ -50,8 +50,8 @@
 	<p>ways to get in touch.</p>
 	<div class="info">
 		<EmailIcon />email <span class="sub">-></span>
-		<a href="mailto:hello@refact0r.dev" class="external"
-			>hello@refact0r.dev<span class="arrow">/></span>
+		<a href="mailto:refact0r.contact@gmail.com" class="external"
+			>refact0r.contact@gmail.com<span class="arrow">/></span>
 		</a>
 		<button class="copy-btn" onclick={copyEmail} aria-label="Copy email">
 			{#if emailCopied}

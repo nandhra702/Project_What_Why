@@ -88,4 +88,4 @@ We may update this privacy policy to reflect changes in our practices or for leg
 
 ## Contact Us
 
-If you have questions about this privacy policy, please contact us at: <hello@refact0r.dev>
+If you have questions about this privacy policy, please contact us at: <refact0r.contact@gmail.com>
