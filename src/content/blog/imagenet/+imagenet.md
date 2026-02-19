@@ -2,7 +2,7 @@
 published: true
 name: 'imagenet classification with deep convolutional neural networks'
 icon: 'paper'
-description: a breakthrough computer vision neural network
+description: 'paper review: a breakthrough computer vision neural network'
 date: 2024-03-24
 ---
 
@@ -10,6 +10,14 @@ date: 2024-03-24
     import CaptionImage from '$lib/components/CaptionImage.svelte';
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_ImageNet Classification with Deep Convolutional Neural Networks_** was published in 2012 by Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton. It introduced the AlexNet architecture, which won the ImageNet Large Scale Visual Recognition Challenge in 2012 by a large margin. The paper is considered one of the most influential papers in the fields of deep learning and computer vision because it demonstrated the power of neural networks for image classification tasks.
 
@@ -72,13 +80,3 @@ As for me, reading this paper was a great learning experience. I knew what neura
 ## source
 
 <https://proceedings.neurips.cc/paper_files/paper/2012/file/c399862d3b9d6b76c8436e924a68c45b-Paper.pdf>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

@@ -2,13 +2,21 @@
 published: true
 name: 'on the criteria to be used in decomposing systems into modules'
 icon: 'paper'
-description: a better method of modularizing software systems
+description: 'paper review: a better method of modularizing software systems'
 date: 2024-03-30
 ---
 
 <script>
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_On the Criteria To Be Used in Decomposing Systems into Modules_** is a paper published by David Parnas in 1972 at Carnegie Mellon. It introduced a new method of modularizing software that focused on information hiding. The paper is considered a seminal work because it established modular design principles that have become fundamental in modern software development.
 
@@ -134,13 +142,3 @@ As for me, reading this paper transformed my perspective on code organization. I
 ## source
 
 <https://www.cs.umd.edu/class/spring2003/cmsc838p/Design/criteria.pdf>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

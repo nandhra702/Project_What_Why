@@ -2,7 +2,7 @@
 published: true
 name: 'you only look once'
 icon: 'paper'
-description: real-time object detection using a single neural network 
+description: 'paper review: real-time object detection using a single neural network'
 date: 2024-07-02
 ---
 
@@ -10,6 +10,14 @@ date: 2024-07-02
     import CaptionImage from '$lib/components/CaptionImage.svelte';
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_You Only Look Once: Unified, Real-Time Object Detection_** is a paper published in 2016 by researchers at the University of Washington. The paper introduces a new approach to object detection that is both faster and more accurate than existing methods by using a single neural network instead of complex pipelines.
 
@@ -84,13 +92,3 @@ Personally, I find this paper interesting because it really clarifies the proces
 ## source
 
 <https://arxiv.org/pdf/1506.02640>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

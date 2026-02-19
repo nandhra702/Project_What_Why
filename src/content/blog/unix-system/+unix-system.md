@@ -2,13 +2,21 @@
 published: true
 name: 'the unix time-sharing system'
 icon: 'paper'
-description: an overview of the design and features of the UNIX operating system.
+description: 'paper review: design and features of the unix operating system'
 date: 2024-02-24
 ---
 
 <script>
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_The UNIX Time-Sharing System_** is a paper published by Dennis M. Ritchie and Ken Thompson in 1974. It describes the UNIX operating system, which was developed at Bell Labs in the late 1960s and early 1970s. This paper is very influential in the history of computer science, and it has had a lasting impact on the design of operating systems and programming languages.
 
@@ -117,13 +125,3 @@ This paper is a fascinating insight into the state of computing in the 1970s. Ma
 ## source
 
 <https://dsf.berkeley.edu/cs262/unix.pdf>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

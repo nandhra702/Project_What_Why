@@ -2,13 +2,21 @@
 published: true
 name: 'the platonic representation hypothesis'
 icon: 'paper'
-description: the theory that AI models converge on shared model of reality
+description: 'paper review: ai models converge on a shared representation of reality'
 date: 2024-06-22
 ---
 
 <script>
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_The Platonic Representation Hypothesis_** is a paper published this year by MIT researchers. It proposes the idea that as AI models become more complex and powerful, they will converge on a shared representation of reality. The paper cites evidence of this convergence, demonstrates the concept on a theoretical level, and discusses its implications.
 
@@ -123,13 +131,3 @@ Personally, I find that the idea of a shared representation of reality quite int
 ## source
 
 <https://arxiv.org/pdf/2405.07987>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

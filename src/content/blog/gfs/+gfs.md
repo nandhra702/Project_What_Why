@@ -2,7 +2,7 @@
 published: true
 name: 'the google file system'
 icon: 'paper'
-description: a scalable distributed file system
+description: 'paper review: a scalable distributed file system'
 date: 2024-04-13
 ---
 
@@ -10,6 +10,14 @@ date: 2024-04-13
     import CaptionSVG from '$lib/components/CaptionSVG.svelte';
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_The Google File System_** was published in 2003 by Sanjay Ghemawat, Howard Gobioff, and Shun-Tak Leung. It introduced the Google File System (GFS), a new distributed file system designed to run on commodity hardware. The paper is considered one of the most influential papers in the field of distributed systems because it demonstrated how to build a reliable and efficient file system for large-scale distributed applications.
 
@@ -136,13 +144,3 @@ For me, this paper demonstrated the complexity of designing large-scale systems.
 ## source
 
 <https://static.googleusercontent.com/media/research.google.com/en//archive/gfs-sosp2003.pdf>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

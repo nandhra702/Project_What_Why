@@ -2,7 +2,7 @@
 published: true
 name: 'playing atari with deep reinforcement learning'
 icon: 'paper'
-description: a deep learning model learns superhuman atari skills
+description: 'paper review: a deep learning model learns superhuman atari skills'
 date: 2024-07-10
 ---
 
@@ -10,6 +10,14 @@ date: 2024-07-10
     import CaptionImage from '$lib/components/CaptionImage.svelte';
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_Playing Atari with Deep Reinforcement Learning_** is a paper published in 2013 by DeepMind researchers. The paper introduces a new deep learning model that learns to play Atari 2600 games directly from raw pixel input. The model uses a new approach to reinforcement learning to achieve superhuman performance in a variety of Atari games.
 
@@ -88,13 +96,3 @@ Personally, it was once again fascinating to see the underlying mechanics of how
 ## source
 
 <https://arxiv.org/pdf/1312.5602>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----

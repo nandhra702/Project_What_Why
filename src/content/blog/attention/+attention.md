@@ -2,7 +2,7 @@
 published: true
 name: 'attention is all you need'
 icon: 'paper'
-description: a revolutionary neural network architecture
+description: 'paper review: a revolutionary neural network architecture'
 date: 2024-06-02
 ---
 
@@ -10,6 +10,14 @@ date: 2024-06-02
     import CaptionImage from '$lib/components/CaptionImage.svelte';
     import Icon from '~icons/ph/files';
 </script>
+
+---
+
+### why did I write this?
+
+This is a paper review post (labelled with <Icon class="icon" />). My goal with these is to read and summarize influential computer science papers to deepen my understanding of the field. Hope you find it useful or interesting!
+
+---
 
 **_Attention is All You Need_** is a paper published in 2017 by Google Brain researchers. It introduced a new type of neural network architecture called the Transformer. Since then, the Transformer model has revolutionized the field of machine learning, especially in regards to natural language processing.
 
@@ -95,13 +103,3 @@ To me, it is fascinating how a process that is essentially a series of matrix an
 ## source
 
 <https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf>
-
-<br>
-
----
-
-### why did I write this?
-
-This blog post is one of my "papers" posts (labelled with this icon: <Icon class="icon" />). My goal is to read, summarize, and comment on influential or interesting papers in computer science. I want to gain a deeper understanding of topics within the field and improve my communication skills. Hopefully, these posts will be interesting and informative to others as well. Thanks for reading!
-
----
