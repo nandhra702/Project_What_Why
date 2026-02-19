@@ -8,7 +8,7 @@
 	<p>just some random photos. shot on pixel 8, pixel 5a, and pixel 2.</p>
 	<br />
 	<div class="grid">
-		{#each images as image}
+		{#each images as image (image.img.src)}
 			<picture>
 				<source srcset={image.sources.avif} type="image/avif" />
 				<source srcset={image.sources.webp} type="image/webp" />
