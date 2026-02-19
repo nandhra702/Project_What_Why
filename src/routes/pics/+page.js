@@ -9,7 +9,10 @@ export async function load() {
 	});
 
 	const entries = Object.entries(imports);
-	entries.reverse();
+	for (let i = entries.length - 1; i > 0; i--) {
+		const j = Math.floor(Math.random() * (i + 1));
+		[entries[i], entries[j]] = [entries[j], entries[i]];
+	}
 
 	const images = entries.map(([path, module]) => module);
 
