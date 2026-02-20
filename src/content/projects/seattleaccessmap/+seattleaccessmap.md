@@ -2,7 +2,7 @@
 published: true
 name: seattleaccessmap
 description: an accessibility visualization and routing tool
-thumbnail: sam3.png
+thumbnail: sam.png
 images: [sam3.png, sam4.png, sam5.png, sam6.png, sam1.png]
 github: https://github.com/refact0r/seattleaccessmap
 website: https://refact0r.github.io/seattleaccessmap/

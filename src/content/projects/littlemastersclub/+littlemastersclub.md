@@ -2,7 +2,7 @@
 published: true
 name: little masters club
 description: website for little masters club
-thumbnail: lmc.png
+thumbnail: lmc0.png
 images: [lmc.png, lmc2.png, lmc3.png, lmc4.png, lmc5.png]
 github: 
 website: https://littlemastersclub.org

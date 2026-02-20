@@ -1,0 +1,36 @@
+---
+published: true
+name: re-collect
+description: personal visual inspiration library
+thumbnail: recollect.png
+images: [recollect1.png, recollect2.png, recollect3.png]
+github: https://github.com/refact0r/re-collect
+website: https://collect.refact0r.dev
+date: 2026-02-19
+---
+
+<script>
+    import CaptionImage from '$lib/components/CaptionImage.svelte';
+</script>
+
+re-collect is a personal visual inspiration library. It's basically a [https://are.na](are.na) clone, built on sveltekit + convex + r2 + workers.
+
+## why
+
+For a long time, I've maintained a google keep list of websites I think have cool designs. I wanted a more organized way to access and view them. I tried are.na, but the free tier is quite limited. So I decided to build my own. The original idea was for web design inspiration, but the app for any kind of visual content, so I naturally extended the scope.
+
+Part of the appeal was wanting to refine my aesthetic taste. Having everything in one place makes it easier to revisit inspiration (hence the name, re-collect). It also was good excuse to pick up some new tech (convex, r2) and experiment with new agentic coding tools (conductor, ami).
+
+## stack
+
+The app is a pretty standard sveltkit SPA. I heard good things about convex, so I decided to go with it over supabase. The realtime features are maybe a bit overkill for this type of app, but overall the dev experience was really good. Part of that is because convex keeps a lot of the database functions in your codebase, so ai agents are effective at using it.
+
+For image storage, I went with r2 because of zero egress fees and explicit convex support. I'm not a fan of how with the default behavior, image urls get changed every time you fetch them, but I suppose it makes sense for keeping the bucket private. I had to build a cache system on the frontend to avoid this.
+
+One of the best features of are.na is that it automatically screenshots links you paste. To replicate this feature, I built a cloudflare worker that uses puppeteer to visit the website and take a screenshot. It works, but there are some challenges I have yet to figure out. For one, I would like to detect when a website's loading animation finishes so I can take the screenshot faster, instead of waiting a long fixed timeout every time. I also want to be able to automatically close cookie popups for a cleaner screenshot.
+
+Currently, the project has an extremely primitive single-user login system (read-only until you enter a password). The idea was for me to take full advantage of a free plan r2 bucket and effectively have unlimited storage. But in the future I may extend the project to be a full saas, if other people express interest in it.
+
+## thoughts
+
+This was a really enjoyable project to build, partly due to my experimentation with various ai coding tools. They let me focus on overall planning and visual polish instead of writing major features. I completed the entire thing in under a month, basically spending an hour or two on it every other day.
