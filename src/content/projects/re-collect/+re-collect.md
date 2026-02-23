@@ -13,7 +13,7 @@ date: 2026-02-19
     import CaptionImage from '$lib/components/CaptionImage.svelte';
 </script>
 
-re-collect is a personal visual inspiration library. It's basically a [https://are.na](are.na) clone, built on sveltekit + convex + r2 + workers.
+re-collect is a personal visual inspiration library. It's basically a [are.na](https://are.na) clone, built on sveltekit + convex + r2 + workers.
 
 ## why
 
