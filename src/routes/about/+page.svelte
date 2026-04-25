@@ -6,10 +6,9 @@
 
 	let content = {
 		tech: {
-			languages: ['js', 'ts', 'html', 'css', 'python', 'dart', 'java'],
+			languages: ['js', 'ts', 'python', 'java', 'dart', 'html', 'css'],
 			frameworks: ['sveltekit', 'flutter', 'tensorflow'],
-			cms: ['sanity', 'decap'],
-			tools: ['vscode', 'figma', 'inkscape']
+			tools: ['vscode', 'claude code', 'codex', 'figma', 'inkscape']
 		}
 	};
 </script>
