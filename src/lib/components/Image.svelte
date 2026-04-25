@@ -1,63 +1,72 @@
 <script>
-	let { image, alt, sizes = '', loading = 'eager' } = $props();
+	let { image, alt, sizes = '', loading = 'eager', fetchpriority = 'auto' } = $props();
 
 	// Check if the image is an external URL
 	const isExternalUrl = $derived(image ? /^https?:\/\//.test(image) : false);
 	const isGif = $derived(image ? image.endsWith('.gif') : false);
 
-	async function importImage(image) {
-		if (image.endsWith('.gif')) {
-			const gifs = import.meta.glob(`/src/content/**/*.gif`, {
-				import: 'default'
-			});
+	const gifs = import.meta.glob('/src/content/**/*.gif', {
+		import: 'default',
+		eager: true
+	});
 
+	const pictures = import.meta.glob('/src/content/**/*.{avif,heif,jpeg,jpg,png,tiff,webp}', {
+		import: 'default',
+		eager: true,
+		query: {
+			enhanced: true,
+			w: '2400;2000;1600;1200;800;400'
+		}
+	});
+
+	function importImage(image) {
+		if (image.endsWith('.gif')) {
 			for (const [path, src] of Object.entries(gifs)) {
 				if (path.includes(image)) {
-					return await src();
+					return src;
 				}
 			}
+			return;
 		}
-
-		const pictures = import.meta.glob(`/src/content/**/*.{avif,heif,jpeg,jpg,png,tiff,webp}`, {
-			import: 'default',
-			query: {
-				enhanced: true,
-				w: '2400;2000;1600;1200;800;400'
-			}
-		});
 
 		for (const [path, src] of Object.entries(pictures)) {
 			if (path.includes(image)) {
-				return await src();
+				return src;
 			}
 		}
 	}
+
+	const src = $derived(image && !isExternalUrl ? importImage(image) : null);
 </script>
 
 {#if isExternalUrl}
-	<img src={image} {alt} {loading} {sizes} onload={(e) => (e.target.style.opacity = 1)} />
+	<img
+		src={image}
+		{alt}
+		{loading}
+		{fetchpriority}
+		{sizes}
+		onload={(e) => (e.target.style.opacity = 1)}
+	/>
 {:else if isGif}
-	{#await importImage(image) then src}
-		{#if src}
-			<img {src} {alt} {loading} onload={(e) => (e.target.style.opacity = 1)} />
-		{/if}
-	{/await}
+	{#if src}
+		<img {src} {alt} {loading} {fetchpriority} onload={(e) => (e.target.style.opacity = 1)} />
+	{/if}
 {:else if image}
 	<picture>
-		{#await importImage(image) then src}
-			{#if src}
-				<source srcset={src.sources.avif} type="image/avif" {sizes} />
-				<source srcset={src.sources.webp} type="image/webp" {sizes} />
-				<img
-					src={src.img.src}
-					{alt}
-					{loading}
-					width={src.img.w}
-					height={src.img.h}
-					onload={(e) => (e.target.style.opacity = 1)}
-				/>
-			{/if}
-		{/await}
+		{#if src}
+			<source srcset={src.sources.avif} type="image/avif" {sizes} />
+			<source srcset={src.sources.webp} type="image/webp" {sizes} />
+			<img
+				src={src.img.src}
+				{alt}
+				{loading}
+				{fetchpriority}
+				width={src.img.w}
+				height={src.img.h}
+				onload={(e) => (e.target.style.opacity = 1)}
+			/>
+		{/if}
 	</picture>
 {/if}
 

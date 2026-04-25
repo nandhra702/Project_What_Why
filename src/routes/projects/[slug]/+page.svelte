@@ -52,9 +52,15 @@
 	</div>
 	<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
 		<div class="embla__container" class:loop>
-			{#each metadata.images as image}
+			{#each metadata.images as image, index}
 				<div class="embla__slide" class:tall={metadata.aspect_ratio === 'tall'}>
-					<Image {image} alt={metadata.description} sizes="(min-width: 800px) 80vw, 100vw" />
+					<Image
+						{image}
+						alt={metadata.description}
+						sizes="(min-width: 800px) 80vw, 100vw"
+						loading={index === 0 ? 'eager' : 'lazy'}
+						fetchpriority={index === 0 ? 'high' : 'auto'}
+					/>
 				</div>
 			{/each}
 		</div>
