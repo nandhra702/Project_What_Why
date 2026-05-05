@@ -88,7 +88,7 @@
 			<div class="color" style="background: var(--blue); color: var(--bg);">blue</div>
 		</div>
 	</div>
-	<h2>indieweb</h2>
+	<h2>friends</h2>
 	<div class="info">
 		<a class="card" href="/" rel="nofollow">
 			<img src="/88x31.png" alt="refact0r" />
@@ -102,6 +102,12 @@
 		<a class="card" href="https://vendicated.dev" rel="nofollow">
 			<img src="https://vendicated.dev/_astro/me.D0UvsSv8.gif" alt="ven" />
 		</a>
+	</div>
+	<div class="info">
+		<a class="friend external" href="https://abhay7.dev/">abhay7<span class="arrow">/></span></a>
+		<a class="friend external" href="https://yaoderek.github.io/personal/"
+			>yaoderek<span class="arrow">/></span></a
+		>
 	</div>
 	<div class="info">
 		<a class="webring previous" href="https://ctp-webr.ing/refact0r/previous">
@@ -152,6 +158,11 @@
 		&.previous:hover span {
 			transform: translateX(-0.3em);
 		}
+	}
+
+	.friend {
+		margin: 0 0.5rem 0 0;
+		display: inline;
 	}
 
 	.card {
