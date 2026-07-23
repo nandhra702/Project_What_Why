@@ -1,4 +1,4 @@
-import { nameFromPath, importOgImage } from '$lib/js/posts.js';
+import { nameFromPath } from '$lib/js/posts.js';
 import { error } from '@sveltejs/kit';
 import { dev } from '$app/environment';
 
@@ -20,16 +20,12 @@ export async function load({ params }) {
 		throw error(404, 'post not found');
 	}
 
-	let imagePath = match.path.split('/').slice(0, -1).join('/') + '/' + post.metadata.ogImage;
-	let image = await importOgImage(imagePath);
-
 	return {
 		post,
 		meta: {
 			title: post.metadata.name,
 			description: post.metadata.description,
-			type: 'article',
-			image
+			type: 'article'
 		}
 	};
 }

@@ -44,12 +44,21 @@
 						github<span class="arrow">/></span>
 					</a>
 				{/if}
+				{#if metadata.blog}
+					<a class="external" href={metadata.blog}>
+						blog<span class="arrow">/></span>
+					</a>
+				{/if}
 			</div>
 		</div>
 		<p class="description">
 			{metadata.description}
 		</p>
 	</div>
+	<div class="content">
+		<Content />
+	</div>
+	{#if metadata.images && metadata.images.length > 0}
 	<div class="embla" use:emblaCarouselSvelte={{ options }} onemblaInit={emblaInit}>
 		<div class="embla__container" class:loop>
 			{#each metadata.images as image, index}
@@ -57,7 +66,7 @@
 					<Image
 						{image}
 						alt={metadata.description}
-						sizes="(min-width: 800px) 80vw, 100vw"
+						sizes="(min-width: 800px) 50vw, 100vw"
 						loading={index === 0 ? 'eager' : 'lazy'}
 						fetchpriority={index === 0 ? 'high' : 'auto'}
 					/>
@@ -67,9 +76,7 @@
 		<button class="embla__prev" onclick={emblaPrev}><span>&lt;-</span></button>
 		<button class="embla__next" onclick={emblaNext}><span>-></span></button>
 	</div>
-	<div class="content">
-		<Content />
-	</div>
+	{/if}
 </main>
 
 <style>
@@ -129,6 +136,10 @@
 	.embla {
 		overflow: hidden;
 		position: relative;
+		width: 100%;
+		max-width: 53rem;
+		margin: 2rem auto 0 auto;
+		padding: 0 1.5rem;
 	}
 	.embla__container {
 		display: flex;
@@ -139,15 +150,14 @@
 		}
 	}
 	.embla__slide {
-		flex: 0 0 70%;
-		max-width: 80rem;
+		flex: 0 0 80%;
 		min-width: 0;
-		margin-left: 1.5rem;
-		margin-right: 1.5rem;
+		margin-left: 0.75rem;
+		margin-right: 0.75rem;
 
 		&.tall {
-			flex: 0 0 20%;
-			max-width: 25rem;
+			flex: 0 0 40%;
+			max-width: 20rem;
 		}
 	}
 	.embla__prev,
@@ -155,47 +165,46 @@
 		position: absolute;
 		top: 0;
 		bottom: 0;
-		width: calc(15% - 3rem);
+		width: 1.5rem;
 		background: none;
 
 		span {
 			display: inline-block;
 			color: var(--txt);
-			font-size: 3rem;
+			font-size: 1.5rem;
 			font-family: 'Space Mono', monospace;
 			transform: scale(1);
 			transition: 0.2s;
 			opacity: 0;
 			background: var(--bg-2);
-			width: 3rem;
-			height: 3rem;
-			line-height: 2.7rem;
+			width: 2rem;
+			height: 2rem;
+			line-height: 1.8rem;
 			border: 2px solid var(--bg-3);
 		}
 
 		&:hover span {
 			opacity: 1;
-			transform: scale(1.2);
+			transform: scale(1.1);
 		}
 	}
 	.embla__next {
-		right: 0;
+		right: 1.5rem;
 	}
 	.embla__prev {
-		left: 0;
+		left: 1.5rem;
 	}
 
 	@media (max-width: 850px) {
 		.embla__slide {
-			flex: 0 0 calc(100% - 3rem);
+			flex: 0 0 calc(100% - 1.5rem);
 
 			&.tall {
-				flex: 0 0 calc(100% - 3rem);
+				flex: 0 0 calc(100% - 1.5rem);
 			}
 		}
 		.embla__prev,
 		.embla__next {
-			width: 20%;
 			span {
 				opacity: 1;
 			}

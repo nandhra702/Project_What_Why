@@ -1,7 +1,7 @@
 export function load() {
 	return {
 		meta: {
-			title: 'refact0r',
+			title: 'Sukhraj Singh Nandhra',
 			description: 'my website/portfolio/blog.'
 		}
 	};

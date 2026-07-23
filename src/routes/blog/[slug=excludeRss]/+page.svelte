@@ -14,7 +14,7 @@
 		<a href="/blog" class="back"><span class="arrow">&lt;-</span>blog</a>
 	</div>
 	<h1>
-		<Icon class="icon" />{metadata.name}
+		{metadata.name}
 	</h1>
 	<p class="date">{formatDate(metadata.date)}</p>
 	<p class="description">{metadata.description}</p>
@@ -34,6 +34,12 @@
 	.content {
 		overflow-x: hidden;
 		max-width: 100%;
+	}
+
+	.content :global(img) {
+		max-width: 100%;
+		height: auto;
+		margin: 1.5rem 0;
 	}
 
 	.date {

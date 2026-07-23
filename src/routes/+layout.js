@@ -3,7 +3,7 @@ export const prerender = true;
 export const load = () => {
 	return {
 		meta: {
-			title: 'refact0r',
+			title: 'Sukhraj Singh Nandhra',
 			description: 'my website/portfolio/blog.'
 		}
 	};

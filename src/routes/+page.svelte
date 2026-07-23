@@ -5,12 +5,14 @@
 <main>
 	<div class="container">
 		<div class="row">
-			<h1>refact0r</h1>
 			<div class="logo">
 				<LogoAnimated />
 			</div>
+			<div class="heading">
+				<h1>sukhraj singh</h1>
+			</div>
 		</div>
-		<p>hey there! i'm yifan, a cs student interested in ai, web dev, design, and more.</p>
+		<p class="bio"> hey there! i'm a cse student at shiv nadar institute of eminence. .</p>
 		<nav>
 			<a class="nav" href="/about">
 				<span class="arrow">-></span><span class="slash">/</span>about
@@ -21,11 +23,11 @@
 			<a class="nav" href="/blog">
 				<span class="arrow">-></span><span class="slash">/</span>blog
 			</a>
-			<a class="nav" href="/pics">
-				<span class="arrow">-></span><span class="slash">/</span>pics
-			</a>
 			<a class="nav" href="/contact">
 				<span class="arrow">-></span><span class="slash">/</span>contact
+			</a>
+			<a class="nav" href="/resume.pdf" target="_blank">
+				<span class="arrow">-></span><span class="slash">/</span>resume
 			</a>
 		</nav>
 	</div>
@@ -50,11 +52,34 @@
 	.logo {
 		width: 3.75rem;
 		height: 3.75rem;
+		flex-shrink: 0;
+	}
+
+	.heading {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
 	}
 
 	h1 {
-		font-size: 3rem;
+		font-size: 2.5rem;
 		margin: 0;
+	}
+
+	.role {
+		font-size: 1.125rem;
+		font-family: 'Space Mono', monospace;
+		color: var(--txt-2);
+		margin: 0;
+	}
+
+	.sep {
+		margin: 0 0.5ch;
+	}
+
+	.bio {
+		font-size: 1.25rem;
+		margin: 1rem 0;
 	}
 
 	nav {
@@ -78,8 +103,8 @@
 			gap: 1rem;
 		}
 		.row {
-			flex-direction: column-reverse;
-			gap: 0.5rem;
+			flex-direction: column;
+			gap: 0.75rem;
 			align-items: flex-start;
 		}
 	}

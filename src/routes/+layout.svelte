@@ -15,7 +15,6 @@
 		{ name: 'about', path: '/about' },
 		{ name: 'projects', path: '/projects' },
 		{ name: 'blog', path: '/blog' },
-		{ name: 'pics', path: '/pics' },
 		{ name: 'contact', path: '/contact' }
 	];
 
@@ -85,7 +84,7 @@
 		<a class="pfp" href="/" aria-label="homepage">
 			<LogoAnimated skipInitialAnimation={true} />
 		</a>
-		<a href="/"><h1>refact0r</h1></a>
+		<a href="/"><h1>sukhraj</h1></a>
 	</div>
 	<nav>
 		{#each pages as { name, path }}

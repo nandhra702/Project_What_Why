@@ -1,12 +1,12 @@
 <script>
-	import DiscordIcon from '~icons/ph/discord-logo';
+	import GithubIcon from '~icons/ph/github-logo';
+	import LinkedinIcon from '~icons/ph/linkedin-logo';
 	import EmailIcon from '~icons/ph/envelope';
 	import CopyIcon from '~icons/ph/copy';
 	import CheckIcon from '~icons/ph/check';
 
 	let status = $state('submit ->');
 	let emailCopied = $state(false);
-	let discordCopied = $state(false);
 
 	const handleSubmit = async (data) => {
 		data.preventDefault();
@@ -33,15 +33,9 @@
 	};
 
 	const copyEmail = async () => {
-		await navigator.clipboard.writeText('refact0r.contact@gmail.com');
+		await navigator.clipboard.writeText('sukhrajsinghnandhra@gmail.com');
 		emailCopied = true;
 		setTimeout(() => (emailCopied = false), 1000);
-	};
-
-	const copyDiscord = async () => {
-		await navigator.clipboard.writeText('refact0r');
-		discordCopied = true;
-		setTimeout(() => (discordCopied = false), 1000);
 	};
 </script>
 
@@ -50,8 +44,8 @@
 	<p>ways to get in touch.</p>
 	<div class="info">
 		<EmailIcon />email <span class="sub">-></span>
-		<a href="mailto:refact0r.contact@gmail.com" class="external"
-			>refact0r.contact@gmail.com<span class="arrow">/></span>
+		<a href="mailto:sukhrajsinghnandhra@gmail.com" class="external"
+			>sukhrajsinghnandhra@gmail.com<span class="arrow">/></span>
 		</a>
 		<button class="copy-btn" onclick={copyEmail} aria-label="Copy email">
 			{#if emailCopied}
@@ -62,17 +56,16 @@
 		</button>
 	</div>
 	<div class="info">
-		<DiscordIcon />discord <span class="sub">-></span>
-		<a href="https://discord.com/users/508863359777505290" class="external"
-			>refact0r<span class="arrow">/></span>
+		<GithubIcon />github <span class="sub">-></span>
+		<a href="https://github.com/nandhra702" class="external"
+			>nandhra702<span class="arrow">/></span>
 		</a>
-		<button class="copy-btn" onclick={copyDiscord} aria-label="Copy Discord username">
-			{#if discordCopied}
-				<CheckIcon />
-			{:else}
-				<CopyIcon />
-			{/if}
-		</button>
+	</div>
+	<div class="info">
+		<LinkedinIcon />linkedin <span class="sub">-></span>
+		<a href="https://www.linkedin.com/in/sukhraj-singh-nandhra-85b03a279" class="external"
+			>sukhraj-singh-nandhra<span class="arrow">/></span>
+		</a>
 	</div>
 	<br />
 	<br />
@@ -150,7 +143,6 @@
 		border: 2px solid var(--bg-3);
 		transition: 0.2s;
 		background-color: var(--bg-2);
-		/* border-radius: 0.5rem; */
 
 		&:focus {
 			outline: none;
