@@ -1,6 +1,6 @@
 ---
 published: true
-name: "Markout : spot the differences in terminal"
+name: "markout : spot the differences in terminal"
 icon: 'code'
 description: A fast C++ CLI diff tool that highlights only meaningful changes and ignores the noise.
 date: 2025-12-24

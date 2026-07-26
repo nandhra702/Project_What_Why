@@ -1,6 +1,6 @@
 ---
 published: true
-name: "Typright : A notepad just for me"
+name: "typright : a notepad just for me"
 icon: 'code'
 description: A lightweight hybrid notepad with intelligent autocomplete and real-time spellchecking.
 date: 2026-05-31

@@ -1,11 +1,3 @@
 {
-	"rewrites": [
-		{
-			"source": "/stats/:match*",
-			"destination": "https://us.umami.is/:match*"
-		}
-	],
-	"git": {
-		"deploymentEnabled": false
-	}
+	"outputDirectory": "build"
 }

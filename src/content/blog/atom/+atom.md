@@ -1,6 +1,6 @@
 ---
 published: true
-name: "ATOM : visual terminal directory viewer"
+name: "atom : visual terminal directory viewer"
 icon: 'code'
 description: A terminal file explorer that lets you browse visually without leaving the keyboard.
 date: 2026-07-23

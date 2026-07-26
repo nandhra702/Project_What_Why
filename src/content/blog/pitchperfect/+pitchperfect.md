@@ -1,6 +1,6 @@
 ---
 published: true
-name: "PitchPerfect : Started as a joke"
+name: "pitchperfect : started as a joke"
 icon: 'code'
 description: Building a speech coach that measures clarity instead of confidence.
 date: 2026-07-20

@@ -1,6 +1,6 @@
 ---
 published: true
-name: "Palladium : my try at getting me to read news"
+name: "palladium : my try at getting me to read news"
 icon: 'globe'
 description: A local NLP news aggregation platform that clusters events and highlights publisher bias.
 date: 2026-07-11

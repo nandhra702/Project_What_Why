@@ -9,10 +9,10 @@
 				<LogoAnimated />
 			</div>
 			<div class="heading">
-				<h1>sukhraj singh</h1>
+				<h1>Sukhraj Singh</h1>
 			</div>
 		</div>
-		<p class="bio"> hey there! i'm a cse student at shiv nadar institute of eminence. .</p>
+		<p class="bio"> Hey there ! I'm a cse student at Shiv Nadar Institute of Eminence. .</p>
 		<nav>
 			<a class="nav" href="/about">
 				<span class="arrow">-></span><span class="slash">/</span>about

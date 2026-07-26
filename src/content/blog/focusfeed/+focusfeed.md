@@ -1,6 +1,6 @@
 ---
 published: true
-name: "FocusFeed : build your feed"
+name: "focusfeed : build your feed"
 icon: 'globe'
 description: A curated YouTube feed builder to stop the endless scroll at dinner time.
 date: 2026-05-15

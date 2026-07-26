@@ -1,10 +1,14 @@
 ---
 published: true
-name: "BombSquad : AI minesweeper solver"
+name: "bombsquad : ai minesweeper solver"
 icon: 'code'
 description: An AI agent that solves Minesweeper using logic-based constraint propagation.
 date: 2026-01-22 
 ---
+
+<script>
+  import Image from '$lib/components/Image.svelte';
+</script>
 
 Minesweeper has a reputation for being unsolvable without guessing. But a surprisingly large chunk of any given board is actually solvable through pure logic — if you're systematic enough.
 
@@ -18,6 +22,9 @@ The classic Minesweeper game presents a grid of covered cells. Some cells contai
 
 An AI solver that plays purely by logic should be able to clear every deterministically solvable cell without a single guess — and only guess when no logical move is available.
 
+<Image image="strat.jpeg" alt="bomb" />
+
+
 ---
 
 ## What was built
@@ -26,7 +33,21 @@ An AI solver that plays purely by logic should be able to clear every determinis
 
 The agent maintains a knowledge base of constraints — each discovered number cell becomes a constraint over its neighboring covered cells. When a constraint's mine count equals the number of remaining covered neighbors, all those neighbors are flagged. When a constraint's mine count is zero, all remaining neighbors are safe to uncover.
 
+<Image image="moves.jpeg" alt="moves_left" />
+
+
 More interestingly, the agent performs **subset reasoning**: if one constraint's covered cells are a subset of another's, the difference in mine counts applies to the difference in cells. This allows the solver to make deductions that naive cell-by-cell inspection would miss.
+
+Hence multiple stratergies, in total 6 being 
+- Basic (number of uncovered tiles equals number on tile)
+- Groups (basic tile elimination based on common spread)
+- Subgroups (figuring out atleast and atmost number of mines)
+- Counter (using number of mines left)
+- Constraint Satisfaction Problem (equations)
+- Guessing (probability of being a mine)
+
+
+<Image image="Solver.jpeg" alt="moves_left" />
 
 ---
 

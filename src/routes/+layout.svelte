@@ -15,7 +15,8 @@
 		{ name: 'about', path: '/about' },
 		{ name: 'projects', path: '/projects' },
 		{ name: 'blog', path: '/blog' },
-		{ name: 'contact', path: '/contact' }
+		{ name: 'contact', path: '/contact' },
+		{ name: 'resume', path: '/resume.pdf', external: true }
 	];
 
 	let currPage = $state(page.url.pathname);
@@ -87,8 +88,8 @@
 		<a href="/"><h1>sukhraj</h1></a>
 	</div>
 	<nav>
-		{#each pages as { name, path }}
-			<a class="nav" href={path}>
+		{#each pages as { name, path, external }}
+			<a class="nav" href={path} target={external ? '_blank' : undefined} rel={external ? 'noopener noreferrer' : undefined} data-sveltekit-reload={external ? '' : undefined}>
 				<span class="arrow">-></span><span class="slash">/</span>{name}
 			</a>
 		{/each}
