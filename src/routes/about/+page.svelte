@@ -19,7 +19,7 @@
         {
             org: 'Hewlett Packard Enterprise',
             role: 'cpp3 intern',
-            period: 'jan 2026 – may 2026',
+            period: 'jan 2026 – july 2026',
             
         },
         {
